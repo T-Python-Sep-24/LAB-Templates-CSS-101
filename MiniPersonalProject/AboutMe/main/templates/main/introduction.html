@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="../src/output.css">!-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Introduction Page</title>
+</head>
+<body class="bg-gradient-to-r from-violet-200 to-pink-200">
+    <form action="{% url 'main:introduction_view'%}" method="post">
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+    </form>
+</body>
+</html>
