@@ -1,10 +1,145 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Introduction</title>
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-    <h1></h1>
+<nav>
+    <a href="{% url 'html_css_app:main_view' %}">Main <img src=""/> </a>
+    <a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a>
+    <a href="{% url 'html_css_app:css_view' %}">css</a>
+    <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
+    <a href="{% url 'html_css_app:cv_view' %}">Personal Portfolio</a>
+</nav>
+<hr>
+<div>
+    <h1>Photography Portfolio</h1>
+    <h4>Photography is my passion, I love capturing the beauty of the world, revisiting old memories and showing others my perspective of things and the beautiful details of various scenes</h4>
+    <p>Nature is filled with amazing details for whom who appreciate it and think deeply about what is around them</p>
+    <p>Human being also build nice architectures, and formed things amuse the eyes </p>
+</div>
+{% for photo in photos %}
+
+<div class="photo-item">
+    <img src="{% static photo.photoName %}" width="430" height="690" alt="{{ photo.id }}">
+    <br>
+    <p id="likeCount-{{ photo.id }}" data-likes=" {{ photo.likes }} ">Likes: {{ photo.likes }}</p>
+    <input class="like-btn" type="button" value="Like ❤ " onclick="updateLikes({{ photo.id }})">
+    {% for cap in photo.captions %}
+    <p>{{ cap }}</p>
+    {% endfor %}
+    <p>Comments:</p>
+    <div id="comments">
+
+    </div>
+    <label>
+        <input id="commentImg-{{ photo.id }}" type="text" placeholder="Leave Your Comment">
+    </label>
+    <input type="button" value="Add Comment" onclick="addComment({{ photo.id }})">
+</div>
+
+{% endfor %}
+
+
+<div class="photo-item gallery" id="gallery">
+
+</div>
+<div class="upload-form">
+    <h2>Upload a Photo</h2>
+    <form id="photoForm">
+        <label for="photo">Choose a photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <label for="comment">Add a comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+        <button type="button" id="addBtn">Upload</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("addBtn").addEventListener("click", addImg);
+    function addImg(){
+        event.preventDefault();
+
+        // Get the file and comment
+        const photoFile = document.getElementById("photo").files[0];
+        const commentText = document.getElementById("comment").value;
+
+        if (photoFile && commentText) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                // Create elements for the new photo and comment
+                const photoItem = document.createElement("div");
+                photoItem.classList.add("photo-item");
+
+                const img = document.createElement("img");
+                img.width = 230
+                img.height = 350
+                img.src = event.target.result; // Set image source to file content
+
+                const likes = document.createElement("p");
+                likes.innerText = "Likes: 0"
+
+                const likesBtn = document.createElement("input");
+                likesBtn.type = "Button"
+                likesBtn.value = "Like ❤ "
+
+                const comment = document.createElement("p");
+                comment.textContent = commentText;
+
+                const label = document.createElement("label");
+                label.innerHTML = `Comment: <input type="text" placeholder="Leave Your Comment">`;
+
+                const addButton = document.createElement("input");
+                addButton.type = "button";
+                addButton.value = "Add";
+
+                // Append photo and comment to the gallery
+                photoItem.appendChild(img);
+                photoItem.appendChild(likes);
+                photoItem.appendChild(likesBtn);
+                photoItem.appendChild(comment);
+                photoItem.appendChild(label);
+                photoItem.appendChild(addButton);
+                document.getElementById("gallery").appendChild(photoItem);
+
+                // Clear the form
+                document.getElementById("photoForm").reset();
+            };
+            reader.readAsDataURL(photoFile);
+        }
+
+    }
+    // Function To update the likes count for each image
+    function updateLikes(photoId) {
+        console.log(`id: ${photoId}`)
+        // Get the current number of likes from the data attribute
+        let likeCountElement = document.getElementById(`likeCount-${photoId}`);
+        let currentLikes = parseInt(likeCountElement.getAttribute("data-likes"));
+
+        // Increment the count and update the display
+        currentLikes++;
+        likeCountElement.setAttribute("data-likes", currentLikes); // Update the data attribute
+        likeCountElement.textContent = `Likes: ${currentLikes}`;   // Update the displayed text
+    }
+    function addComment(commImgId){
+
+        console.log(`id: ${commImgId}`)
+        const comments_space = document.getElementById("comments");
+        const commentText = document.getElementById(`commentImg-${commImgId}`).value;
+
+        const theComment = document.createElement("p");
+        theComment.innerText = commentText
+
+        comments_space.appendChild(theComment);
+
+        document.getElementById(`commentImg-${commImgId}`).value = ""
+
+    }
+</script>
 </body>
 </html>

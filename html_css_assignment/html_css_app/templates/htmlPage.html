@@ -3,16 +3,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>html Introduction</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Photography Portfolio</title>
+    <style>
+        * {
+            font-family: "Sofia", sans-serif;
+        }
+        body {
+            font-family: "Sofia", sans-serif;
+            margin: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .photo-item {
+            width: 200px;
+            text-align: center;
+        }
+        .photo-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .upload-form {
+            margin-top: 20px;
+        }
+        nav {
+            padding: 10px 30px 10px 30px;
+        }
+        nav a {
+            padding: 0 30px 30px 0; text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <nav style="padding: 10px 30px 10px 30px">
-        <a href="{% url 'html_css_app:main_view' %}" style="padding: 0 30px 30px 0; text-decoration: none;">Main <img src=""/> </a>
-        <a href="{% url 'html_css_app:html_view' %}" style="padding: 0 30px 30px 0; text-decoration: none; ">HTML</a>
-        <a href="{% url 'html_css_app:css_view' %}" style="padding: 0 30px 30px 0; text-decoration: none;">css</a>
-        <a href="{% url 'html_css_app:ai_article_view' %}" style="padding: 0 30px 30px 0; text-decoration: none; ">AI Article</a>
-        <a href="{% url 'html_css_app:cv_view' %}" style="padding: 0 30px 30px 0; text-decoration: none; ">My CV</a>
+    <nav>
+        <a href="{% url 'html_css_app:main_view' %}">Main <img src=""/> </a>
+        <a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a>
+        <a href="{% url 'html_css_app:css_view' %}">css</a>
+        <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
+        <a href="{% url 'html_css_app:cv_view' %}">My CV</a>
     </nav>
     <hr>
     <div>
@@ -31,10 +61,14 @@
         {% for cap in photo.captions %}
             <p>{{ cap }}</p>
         {% endfor %}
+        <p>Comments:</p>
+        <div id="comments">
+
+        </div>
         <label>
-            Comment <input type="text" placeholder="Leave Your Comment">
+            <input id="commentImg-{{ photo.id }}" type="text" placeholder="Leave Your Comment">
         </label>
-        <input type="button" value="Add">
+        <input type="button" value="Add Comment" onclick="addComment({{ photo.id }})">
     </div>
 
     {% endfor %}
@@ -112,7 +146,7 @@
         }
         // Function To update the likes count for each image
         function updateLikes(photoId) {
-            console.log(`id: $photoId`)
+            console.log(`id: ${photoId}`)
             // Get the current number of likes from the data attribute
             let likeCountElement = document.getElementById(`likeCount-${photoId}`);
             let currentLikes = parseInt(likeCountElement.getAttribute("data-likes"));
@@ -121,6 +155,20 @@
             currentLikes++;
             likeCountElement.setAttribute("data-likes", currentLikes); // Update the data attribute
             likeCountElement.textContent = `Likes: ${currentLikes}`;   // Update the displayed text
+        }
+        function addComment(commImgId){
+
+            console.log(`id: ${commImgId}`)
+            const comments_space = document.getElementById("comments");
+            const commentText = document.getElementById(`commentImg-${commImgId}`).value;
+
+            const theComment = document.createElement("p");
+            theComment.innerText = commentText
+
+            comments_space.appendChild(theComment);
+
+            document.getElementById(`commentImg-${commImgId}`).value = ""
+
         }
     </script>
 </body>

@@ -78,7 +78,7 @@ def html_view(request: HttpRequest):
 
 def css_view(request: HttpRequest):
 
-    return render(request, 'cssPage.html')
+    return render(request, 'cssPage.html', context={'photos': photos})
 
 
 def ai_article_view(request: HttpRequest):
