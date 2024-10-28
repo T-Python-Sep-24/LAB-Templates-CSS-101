@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html Introduction</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<nav>
+    <a href="{% url 'html_css_app:main_view' %}">Main <img src=""/> </a>
+    <a href="{% url 'html_css_app:html_view' %}">HTML</a>
+    <a href="{% url 'html_css_app:css_view' %}">css</a>
+    <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
+    <a href="{% url 'html_css_app:cv_view' %}">My CV</a>
+
+</nav>
+    <h1>My Photography Portfolio</h1>
+
+</body>
+</html>
