@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        /* Basic styling */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 15px; }
+        .photo-item { width: 200px; text-align: center; }
+        .photo-item img { width: 100%; border-radius: 8px; }
+        .upload-form { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>Photography Portfolio</h1>
+
+<!-- Gallery Section -->
+<div class="gallery" id="gallery">
+    <!-- Example photo with comment -->
+    <!-- Real photos and comments will be added here -->
+</div>
+
+<!-- Form to upload a photo and add a comment -->
+<div class="upload-form">
+    <h2>Upload a Photo</h2>
+    <form id="photoForm">
+        <label for="photo">Choose a photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <label for="comment">Add a comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+        <button type="button" id="addBtn">Upload</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("addBtn").addEventListener("click", addImg);
+    function addImg(){
+        event.preventDefault();
+
+        // Get the file and comment
+        const photoFile = document.getElementById("photo").files[0];
+        const commentText = document.getElementById("comment").value;
+
+        if (photoFile && commentText) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                // Create elements for the new photo and comment
+                const photoItem = document.createElement("div");
+                photoItem.classList.add("photo-item");
+
+                const img = document.createElement("img");
+                img.src = event.target.result; // Set image source to file content
+
+                const comment = document.createElement("p");
+                comment.textContent = commentText;
+
+                // Append photo and comment to the gallery
+                photoItem.appendChild(img);
+                photoItem.appendChild(comment);
+                document.getElementById("gallery").appendChild(photoItem);
+
+                // Clear the form
+                document.getElementById("photoForm").reset();
+            };
+            reader.readAsDataURL(photoFile);
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
