@@ -1,0 +1,74 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inroduction in HTML</title>
+</head>
+<body>
+    <!-- comment -->
+    <h1 id="H1">Things I like.</h1>
+    <img src="{%static 'images/hobby.png'%}" alt="html-logo" width="100%" height="400"/>
+    <p>some of <stong>My</stong> hobbies: </p>
+    <ul>
+        <li>drawing</li>
+        <li>travlling</li>
+    </ul>
+    <br/>
+    <p>some of <stong>New</stong> hobbies: </p>
+    <ol>
+        <li>reading</li>
+        <ul>
+            <li>my faveroite book is "how to impact on other"</li>
+        </ul>
+        <li>explore new things</li>
+    </ol>
+
+    <p>links to help me work on my hobbies: </p>
+    <table style="border: 1px solid black; ">
+        <caption>My sources table</caption>
+        <thead>
+            <tr>
+                <th  style="border: 1px solid black; ">Hobby</th>
+                <th  style="border: 1px solid black; ">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th  style="border: 1px solid black; ">Reading</th>
+                <td  style="border: 1px solid black; "><a href="https://readtheory.org/" target="_blank" style="display: block;">reading website</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Explore new things</th>
+                <td>    <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style="display: block;">
+                    <img src="{%static 'images/mark.jpg'%}" style="width:42px;height:42px;" >
+                  </a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2" style="background-color: antiquewhite;">
+                    end of table
+                </th>
+            </tr>
+        </tfoot>    
+    </table>
+
+    <p>Send your opinion through this form:</p>
+
+
+    <form method="post" action="/handling-form">
+        <lable for="mail">Email</lable>
+        <input type="email" id="mail" name="user_email" style="display: block;"/>
+        <lable for="msg">massege</lable>
+        <textarea id="msg" name="user_message" style="display: block;"></textarea>
+
+        <button type="submit" >submit</button>
+
+    </form>
+    <br/>
+        <button onclick="location.href='#H1'">TOP</button>
+</body>
+</html>
