@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I Love</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Things I Love</h1>
+        <p>Welcome to my personal page where I share the things I love!</p>
+        <nav>
+            <a href="{% url 'Lab:thingsIlove_view' %}">Basic Page (HTML)</a>
+            <span>|</span>
+            <a href="{% url 'Lab:thingsIlove_styled_view' %}">Styled Page (CSS)</a>
+        </nav>
+    </header>
+    <main>
+        <div class="button-container">
+            <a href="" class="button">Mini Project 1</a>
+            <a href="" class="button">Mini Project 2 </a>
+        
+        </div>
+    </main>
+    <footer>
+        <p>Things I Love.</p>
+    </footer>
+</body>
+</html>

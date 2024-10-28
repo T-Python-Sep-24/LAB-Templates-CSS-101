@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I Love</title>
+    {% load static %} 
+</head>
+<body>
+    <header>
+        <h1>Things I Love</h1>
+        <p>Welcome to my personal page where I share the things I love!</p>
+    </header>
+
+    <nav>
+        <a href="#cat">My Cat</a> |
+        <a href="#photography">Photography</a> |
+        <a href="#series">Favorite Show</a> |
+        <a href="{% url 'Lab:thingsIlove_styled_view' %}">Styled Page </a> |
+        <a href="{% url 'Lab:home_view' %}">Home</a>
+
+    </nav>
+
+    <section id="cat">
+        <h2>My Cat</h2>
+        <p>My cat's name is <strong>Star</strong>. She loves to play and jump around. One of her favorite activities is going for walks in the farm. She enjoys exploring the fields, sniffing the flowers, and chasing after butterflies.</p>
+        <p>Star is also very curious and loves to search for bugs. She spends hours pouncing on grasshoppers and inspecting every little critter she finds. Her adventurous spirit makes her a joy to watch!</p>
+        
+        <img src="{% static 'images/star.jpeg' %}" width="600" height="600" alt="Star the cat">
+        <img src="{% static 'images/star2.jpeg' %}" width="600" height="600" alt="Star playing">
+        
+        <h3>Watch My Cat</h3>
+        <video width="600" controls>
+            <source src="{% static 'videos/star.mov' %}" type="video/mp4">
+        </video>
+        
+        <h3>Leave a Comment:</h3>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Your Username" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="comment" rows="4" cols="50" placeholder="Leave a comment..." required></textarea>
+                <button type="submit">Submit Comment</button>
+            </form>
+    
+            <h4>Comments:</h4>
+            <ul>
+                {% for comment in comments %}
+                    <li><strong>{{ comment.username }} ({{ comment.email }})</strong>: {{ comment.comment }}</li>
+                {% empty %}
+                    <li>No comments yet.</li>
+                {% endfor %}
+            </ul>
+        
+        <p><a href="#top">Return</a></p>
+    </section>
+
+    <section id="series">
+        <h2>Favorite Shows</h2>
+        <table border="1">
+            <tr>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Best Episode</th>
+                <th>Seasons</th>
+            </tr>
+            {% for show in favorite_shows %}
+                <tr>
+                    <td>{{ show.title }}</td>
+                    <td>{{ show.rating }}</td>
+                    <td>{{ show.best_episode }}</td>
+                    <td>{{ show.seasons }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p><a href="#top">Return</a></p>
+    </section>
+
+    <section id="photography">
+        <h2>Photography</h2>
+        <p>While I'm not a professional photographer, I have a genuine passion for capturing beautiful moments through my lens.</p>
+        <ul>
+            <li>
+                Sky
+                <video width="600" controls style="display:none;" id="skyVideo">
+                    <source src="{% static 'videos/sky.mov' %}" type="video/mp4">
+                </video>
+                <button onclick="document.getElementById('skyVideo').style.display='block';">Show Video</button>
+            </li>
+            <li>
+                Sea
+                <video width="600" controls style="display:none;" id="seaVideo">
+                    <source src="{% static 'videos/sea.mov' %}" type="video/mp4">
+                </video>
+                <button onclick="document.getElementById('seaVideo').style.display='block';">Show Video</button>
+            </li>
+            <li>
+                Flowers
+                <button onclick="document.getElementById('flowersImage').style.display='block';">Show Image</button>
+                <img id="flowersImage" src="{% static 'images/Flowers.JPG' %}" width="600" height="600" style="display:none;" alt="Flowers">
+            </li>
+        </ul>
+        <p><a href="#top">Return</a></p>
+    </section>
+</body>
+</html>
