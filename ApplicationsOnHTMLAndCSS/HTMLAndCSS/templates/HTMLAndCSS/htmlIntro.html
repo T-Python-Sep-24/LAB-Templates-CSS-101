@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,74 @@
     <title>HTML Intro</title>
 </head>
 <body>
+
+    <a href="{% url 'HTMLAndCSS:htmlcssHomeView' %}"><i>Back to home page</i></a>
     <h3>HTML Introduction</h3>
-    
+    <p>In this page we will diplay simple use of <b>HTML</b> elemnts</p>
+    <img src= "{% static 'images/htmlLogo.png'%}" alt="html logo">
+    <h4>List of things we did in this page:</h4>
+    <ul>
+        <li>Created Basic Structure</li>
+        <li>Text and Formatting</li>
+        <li>Links and Images</li>
+        <li>Lists and Tables</li>
+        <li>Forms and Input</li>
+    </ul>
+
+    <h4>Table of technical and soft skills:</h4>
+    <table border="solid">
+        <thead>
+            <tr>
+                <th>Soft Skills</th>
+                <th>Technical Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Problem-solving</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Flexibility</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>Teamwork</td>
+                <td>CSS</td>
+            </tr>
+            <tr>
+                <td>Communication</td>
+                <td>SQL</td>
+            </tr>
+            <tr>
+                <td>Time Management</td>
+                <td>Python</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Enter your personal information:</p>
+    <form enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" minlength="2" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="0" max="100" required><br><br>
+
+        <label for="bdate">Birth Date:</label>
+        <input type="date" id="bdate"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="cv">Upload your CV: </label>
+        <input type="file" id="cv" accept="application/pdf"><br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+      </form>
+
 </body>
 </html>
