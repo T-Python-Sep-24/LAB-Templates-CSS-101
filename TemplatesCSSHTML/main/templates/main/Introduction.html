@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Introduction HTML</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/Introduction.css' %}">
+    </head>
+        <body>
+          <div class="header"><h1>My Favorite City</h1></div>
+          <br><br><br><br><br>
+            <div class="div2"><p><i>New York</i></p></div>
+            <br><br>
+            <img src="{% static 'images/NewYork.png' %}" />
+            <img src="{% static 'images/NewYork2.png' %}" />
+            <img src="{% static 'images/TimesSquare.png' %}" />
+            <br><br><br><br><br><br><br><br>
+            <h2><i>Places to visit in New York</i></h2>
+            <ul>
+                <li>Times Square</li>
+                <li>Statue of liberty</li>
+                <li>Wall Street</li>
+              </ul>  
+              <h3><i>The balanced season in NYC</i></h3>
+              <ol>
+                <li >April</li>
+                <li>May</li>
+                <li>June</li>
+              </ol>  
+              <p><i>The best Hotel in NYC </i></p>
+              <table style="width:100%">
+                <tr>
+                  <th>Hotel Name</th>
+                  <th>Hotel Stars</th>
+                </tr>
+                <tr>
+                  <td>Four Seasons | New York</td>
+                  <td>5-star hotel</td>
+                  
+                </tr>
+                <tr>
+                  <td>Aman Resorts | New York</td>
+                  <td>5-star hotel</td>
+                 
+                </tr>
+              </table> 
+              <a href="https://youtu.be/WLSnrXEtrT4?si=S6jw_sPqQNgjp4Eg" target="_blank"><button type="button">Top 10 Things to do in NYC</button></a>
+              <h3>Contact us for any further information</h3>
+              <form>
+                <label>First name:</label><br>
+                <input type="text"><br>
+                <label >Last name:</label><br>
+                <input type="text">
+                <h3>What do you want to ask about ?</h3>
+              <input type="checkbox" value="hotel">
+              <label>Ask for hotel</label><br>
+              <input type="checkbox"  value="City">
+              <label > Ask for city </label><br>
+              <input type="checkbox" value="Website">
+              <label for="vehicle3"> Ask for Website</label><br> 
+              <label for="w3review">Review of Website:</label><br>
+              <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br>
+              <label for="cars">Do you like the site content ? :</label>
+              <select id="cars" name="carlist" form="carform">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+                  <h4>Or you can send email</h4>
+            <a href="mailto:someone@example.com"><button type="button">Send Email</button></a> 
+        </body>
+</html>
