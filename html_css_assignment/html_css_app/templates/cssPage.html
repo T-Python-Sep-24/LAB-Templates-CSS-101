@@ -12,7 +12,7 @@
     <a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a>
     <a href="{% url 'html_css_app:css_view' %}">css</a>
     <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
-    <a href="{% url 'html_css_app:cv_view' %}">Personal Portfolio</a>
+    <a href="{% url 'html_css_app:cv_view' %}">My CV</a>
 </nav>
 <hr>
 <div>
@@ -24,15 +24,15 @@
 {% for photo in photos %}
 
 <div class="photo-item">
-    <img src="{% static photo.photoName %}" width="430" height="690" alt="{{ photo.id }}">
+    <img src="{% static photo.photoName %}" width="230" height="350" alt="img-{{ photo.id }}">
     <br>
-    <p id="likeCount-{{ photo.id }}" data-likes=" {{ photo.likes }} ">Likes: {{ photo.likes }}</p>
+    <p id="likeCount-{{ photo.id }}" data-likes=" {{ photo.likes }}" data-id = "{{photo.id}} ">Likes: {{ photo.likes }}</p>
     <input class="like-btn" type="button" value="Like ❤ " onclick="updateLikes({{ photo.id }})">
     {% for cap in photo.captions %}
     <p>{{ cap }}</p>
     {% endfor %}
     <p>Comments:</p>
-    <div id="comments">
+    <div id="commentsOf-{{ photo.id }}">
 
     </div>
     <label>
@@ -61,13 +61,49 @@
 </div>
 
 <script>
+    // function to update likes of the images
+    function updateLikes(photoId) {
+        console.log(`Updating likes for ID: ${photoId}`);
+        const likeCountElement = document.getElementById(`likeCount-${photoId}`);
+        let currentLikes = parseInt(likeCountElement.getAttribute("data-likes")) || 0;
+
+        // Increment likes
+        currentLikes++;
+        likeCountElement.setAttribute("data-likes", currentLikes);
+        likeCountElement.textContent = `Likes: ${currentLikes}`;
+    }
+
+    // function to add comments to the images
+    function addComment(commImgId) {
+        console.log(`Adding comment for ID: ${commImgId}`);
+        const comments_space = document.getElementById(`commentsOf-${commImgId}`);
+        const commentInput = document.getElementById(`commentImg-${commImgId}`);
+
+
+        if (commentInput && comments_space) {
+            const commentText = commentInput.value;
+            const theComment = document.createElement("p");
+            theComment.innerText = commentText;
+            comments_space.appendChild(theComment);
+
+
+            commentInput.value = "";
+        } else {
+            console.error("Comment input or comment space not found.");
+        }
+    }
+
+    // Main function to add images
     document.getElementById("addBtn").addEventListener("click", addImg);
-    function addImg(){
+    let new_imgs_id = 10; // Initialize new images ID starting from 10
+    function addImg(event) {
+        // Increment ID for the next image
+        new_imgs_id++;
         event.preventDefault();
 
-        // Get the file and comment
         const photoFile = document.getElementById("photo").files[0];
         const commentText = document.getElementById("comment").value;
+        let new_imgs_likes_counter = 1;
 
         if (photoFile && commentText) {
             const reader = new FileReader();
@@ -77,69 +113,62 @@
                 photoItem.classList.add("photo-item");
 
                 const img = document.createElement("img");
-                img.width = 230
-                img.height = 350
-                img.src = event.target.result; // Set image source to file content
+                img.src = event.target.result;
+
+                console.log(`new imgs id = ${new_imgs_id}`)
 
                 const likes = document.createElement("p");
-                likes.innerText = "Likes: 0"
+                likes.id = `likeCount-${new_imgs_id}`;
+                likes.setAttribute("data-likes", new_imgs_likes_counter);
+                likes.innerText = `Likes: ${new_imgs_likes_counter}`;
+                likes.setAttribute("data-id", new_imgs_id)
+                console.log(`data-likes attr ${likes.getAttribute("data-likes")}`)
 
                 const likesBtn = document.createElement("input");
-                likesBtn.type = "Button"
-                likesBtn.value = "Like ❤ "
+                likesBtn.type = "button";
+                likesBtn.value = "Like ❤";
+                likesBtn.onclick = function() {
+                    updateLikes(likes.getAttribute("data-id"));
+                };
 
                 const comment = document.createElement("p");
                 comment.textContent = commentText;
 
+                const comments_div = document.createElement("div");
+                comments_div.id = `commentsOf-${new_imgs_id}`;
+                comments_div.setAttribute("data-id", new_imgs_id);
                 const label = document.createElement("label");
-                label.innerHTML = `Comment: <input type="text" placeholder="Leave Your Comment">`;
+                label.innerHTML = `Comment: <input id="commentImg-${new_imgs_id}" type="text" placeholder="Leave Your Comment">`;
 
                 const addButton = document.createElement("input");
                 addButton.type = "button";
-                addButton.value = "Add";
+                addButton.value = "Add Comment";
+                addButton.onclick = function() {
+                    addComment(comments_div.getAttribute("data-id"));
+                };
 
-                // Append photo and comment to the gallery
+                // Append elements to the photo item container
                 photoItem.appendChild(img);
                 photoItem.appendChild(likes);
                 photoItem.appendChild(likesBtn);
                 photoItem.appendChild(comment);
+                photoItem.appendChild(comments_div);
                 photoItem.appendChild(label);
                 photoItem.appendChild(addButton);
+
+                // Append the new photo item to the gallery
                 document.getElementById("gallery").appendChild(photoItem);
 
                 // Clear the form
                 document.getElementById("photoForm").reset();
+
+
             };
             reader.readAsDataURL(photoFile);
         }
-
-    }
-    // Function To update the likes count for each image
-    function updateLikes(photoId) {
-        console.log(`id: ${photoId}`)
-        // Get the current number of likes from the data attribute
-        let likeCountElement = document.getElementById(`likeCount-${photoId}`);
-        let currentLikes = parseInt(likeCountElement.getAttribute("data-likes"));
-
-        // Increment the count and update the display
-        currentLikes++;
-        likeCountElement.setAttribute("data-likes", currentLikes); // Update the data attribute
-        likeCountElement.textContent = `Likes: ${currentLikes}`;   // Update the displayed text
-    }
-    function addComment(commImgId){
-
-        console.log(`id: ${commImgId}`)
-        const comments_space = document.getElementById("comments");
-        const commentText = document.getElementById(`commentImg-${commImgId}`).value;
-
-        const theComment = document.createElement("p");
-        theComment.innerText = commentText
-
-        comments_space.appendChild(theComment);
-
-        document.getElementById(`commentImg-${commImgId}`).value = ""
-
     }
 </script>
+
+
 </body>
 </html>
