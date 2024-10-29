@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/AI.css' %}">
+    <title>AI Innovations</title>
+</head>
+<body>
+    <header>
+        <h1>AI Innovations</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About AI</a></li>
+                <li><a href="#applications">Applications</a></li>
+                <li><a href="#future">Future of AI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src= "{% static 'images/AI1.png' %}" alt="Descriptive text" />
+            <p>Explore how AI is transforming the world around us.</p>
+            <button onclick="alert('How AI is Transforming Our World 1- Healthcare AI is revolutionizing healthcare through predictive analytics, enabling early disease detection and personalized treatment plans. Tools like AI-driven imaging software assist doctors in diagnosing conditions with greater accuracy. 2- Education AI-powered platforms offer personalized learning experiences, adapting content to suit individual student needs. Virtual tutors provide additional support, making education more accessible and effective. 3- Finance In finance, AI algorithms analyze market trends and manage investments with speed and precision. Fraud detection systems utilize machine learning to identify suspicious transactions, enhancing security.')">Explore Now</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>What is AI?</h2>
+        <div class="about-content">
+            <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines, enabling them to think and act like humans.</p>
+            <br>
+            <div class="ai-animation">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <br>
+            <div class="ai-infographic">
+                <img src="{% static 'images/AI2.png' %}" alt="AI Infographic">
+            </div>
+        </div>
+    </section>
+
+    <section id="applications">
+        <h2>Applications of AI</h2>
+        <div class="application-list">
+            <div class="application-item">Healthcare</div>
+            <div class="application-item">Finance</div>
+            <div class="application-item">Automotive</div>
+            <div class="application-item">Entertainment</div>
+            <div class="application-item">Education</div>
+            <div class="application-item">Manufacturing</div>
+        </div>
+    </section>
+
+    <section id="future" class="future">
+        <h2>The Future of AI</h2>
+        <p>AI continues to evolve, transforming our daily lives and shaping the future of technology.</p>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/watch?v=qVhTHWwAPXw" width="420" height="345">
+            Your browser does not support the video tag.
+            </iframe>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <p >Sign up for our newsletter to stay updated!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at: <a href="mailto:someone@example.com">info@example.com</a></p>
+        <p>&copy; 2024 AI Innovations</p>
+    </footer>
+</body>
+</html>
