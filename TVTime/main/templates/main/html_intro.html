@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Intro</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 2px 0;
+            padding: 0 5px;
+            font-size: medium;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        nav a:hover { /* When the mouse hover the link */
+            text-decoration: underline;
+            color: #004080;
+        }
+        .dotted-divider {
+            width: 80%;
+            border-top: 2px dotted #333; /* Create dotted line */
+            margin: 10px 0; /* Add spacing around the divider */
+            letter-spacing: 5px;
+        }
+        .resized-image {
+            width: 200px; 
+            height: auto; /* Keeps the aspect ratio */
+            max-width: 100%;
+            border-radius: 8px; /* rounded corners */
+        }
+        .styled-table {
+            width: 80%;
+            margin: 20px auto; /* to Center the table */
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        .styled-table th, .styled-table td {
+            padding: 10px 15px; 
+            border: 1px solid #333; /* border */
+            text-align: center;
+        }
+        .styled-table th {
+            background-color: #42433a; /* Header background color */
+            color: white;
+        }
+        .styled-definition-list {
+            width: 80%;
+            margin: 20px auto;
+            font-size: 10;
+            text-align: center;
+            color: #333;
+            line-height: 1.5;
+        }
+        .styled-definition-list dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .styled-definition-list dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            color: #555; 
+        }
+        input {
+            color: #555;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12;
+        }
+        input[type="submit"] {
+            background-color: rgba(43, 31, 31, 0.753);
+            width: 60px;
+            height: 20px;
+            display: block;
+            margin: 0px auto;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin-top: 30px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: indigo;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+
+    </style>    
+</head>
+<body>
+
+    <header>
+        <h2>HTML Introduction</h2>
+    </header>
+
+<!--Link-->    
+    
+    <h5>This is a Link to Go to Home Page:</h5>
+    <nav>
+        <a href="{% url 'main:main_view' %}">Home</a> 
+    </nav>
+    
+    <div class="dotted-divider"></div>
+
+
+<!--Image-->
+
+    <h5>This is an Image:</h5>
+    <img src="{% static 'images/hi.jpeg' %}" alt="Hi Image" class="resized-image" />
+
+    <div class="dotted-divider"></div>
+
+<!--Ordered List-->
+
+    <h5>This is an Ordered List:</h5>
+    <ol>
+        <!--To Do List-->
+        <li>Finish the Lab</li>
+        <li>Go to the supermarket</li>
+    </ol>
+
+    <div class="dotted-divider"></div>
+
+
+<!--Unordered List--> 
+
+    <h5>This is Unordered List:</h5>
+    <ul>
+        <li>Spend Time With my Sisters</li>
+        <li>Do Laundry</li>
+    </ul>
+
+    <div class="dotted-divider"></div>
+
+
+<!--Definition List--> 
+
+    <h5>This is Definition List:</h5>
+    <dl class="styled-definition-list">
+        <dt>My First Item</dt>
+        <dd>My First Description </dd>
+        <dt>My Second Item</dt>
+        <dd>My Second Description </dd>
+    </dl>
+
+    <div class="dotted-divider"></div>
+
+
+<!--Table--> 
+    
+    <h5>This is a Table:</h5>
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <!--Weekly Calendar-->
+            <td>Start The Week Right</td>
+            <td>Finish all My Work</td>
+            <td>Rest</td>
+            <td>Rest</td>
+            <td>Rest</td>
+            <td>Rest</td>
+            <td>Rest</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <div class="dotted-divider"></div>
+
+
+<!--Form--> 
+    
+
+    <h5>This is a Form:</h5>
+    <form action="form" method="post" class="styled-form">
+        {% csrf_token %}
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+<!--Footer--> 
+
+    <footer>
+        <p>By: Khulood </p>
+        </footer>
+
+
+    
+</body>
+</html>
