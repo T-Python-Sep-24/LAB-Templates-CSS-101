@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Revolution</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/ai.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navigtion">
+            <a href="{% url 'Lab:cv_veiw' %}">CV</a>
+            <a href="{% url 'Lab:home_view' %}">Home</a>
+            <button class="Login">Login</button>
+        </nav>
+        <h1>The AI Revolution</h1>
+    </header>
+    
+    <main>
+        <article>
+            <section class="intro">
+                <h2>Understanding the AI Revolution</h2>
+                <p>The AI revolution has fundamentally changed how people collect and process data, transforming business operations across various industries. At its core, AI systems rely on three major aspects: domain knowledge, data generation, and machine learning.</p>
+                <img src="{% static 'images/ai.png' %}" alt="AI Image" class="article-image">
+            </section>
+
+            <section class="key-aspects">
+                <h2>Three key attributes of AI technology.</h2>
+                <h5>Intelligent Decision Making</h5>
+                <p>AI simulates human intelligence to quickly solve problems, learning from data to make accurate decisions while reducing human reliance.</p>
+                <h5>Intentionality</h5>
+                <p>Intentionality allows AI to derive insights from real-time information, reflecting the social context of its users. This sophistication sets it apart from traditional machines.</p>
+                <h5>Adaptability and Prediction</h5>
+                <p>Machine learning helps AI identify patterns and adapt to changes, enhancing its predictive capabilities, as demonstrated by Gmail's Smart Compose feature. </p>
+                
+            </section>
+
+            <div class="References">
+                <h3>References:</h3>
+                <ul>
+                    <li><a href="https://www.wiz.ai/what-is-the-artificial-intelligence-revolution-and-why-does-it-matter-to-your-business/" target="_blank">discussions about AI to stay updated.</a></li>
+
+                </ul>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 AI Insights </p>
+    </footer>
+</body>
+</html>

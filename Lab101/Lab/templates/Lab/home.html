@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I Love</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    
+    <header>
+        <h1>Assignment for HTML/CSS</h1>
+        <nav class="navigtion" >
+            <a href="{% url 'Lab:thingsIlove_view' %}">Basic Page (HTML)</a> |
+            <a href="{% url 'Lab:thingsIlove_styled_view' %}">Styled Page (CSS)</a> |
+            <a href="{% url 'Lab:ai_veiw' %}">AI Revolution</a> |
+            <a href="{% url 'Lab:cv_veiw' %}">CV</a> 
+        </nav>
+    </header>
+
+    <img src="{% static 'images/code.png' %}" width="700" height="700">
+</body>
+</html>

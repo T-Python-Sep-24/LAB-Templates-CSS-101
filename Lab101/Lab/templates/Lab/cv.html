@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume of Alhanouf Aluhydan</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cv.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>Alhanouf Aluhydan</h1>
+            <h2>Computer Science</h2>
+            <div class="contact-info">
+                <a href="tel:+96655976000"><i class="fas fa-phone-alt"></i> +966 55 976 000</a>
+                <a href="mailto:alhanouf@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a><i class="fas fa-map-marker-alt"></i> Tabuk, Riyadh</a>
+                <a href="{% url 'Lab:home_view' %}">Home</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="profile">
+                <h3>Profile</h3>
+                <p>A motivated computer science graduate with a passion for software development and data analysis.</p>
+            </section>
+
+            <section class="experience">
+                <h3>Experience</h3>
+                <div class="job">
+                    <h4>Data Science and Big Data COOP Training</h4>
+                    <p>Worked on data analysis using Python and R, utilized Tableau for data visualizations, and engaged with machine learning and big data using Apache Hadoop.</p>
+                </div>
+            </section>
+
+            <section class="education">
+                <h3>Education</h3>
+                <h4>Bachelor's Degree in Computer Science</h4>
+                <p>University of Tabuk | 2018 - 2022</p>
+            </section>
+
+            <section class="skills">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Tableau</li>
+                    <li>C#, C++, Python</li>
+                    <li>Data Analysis</li>
+                    <li>Machine Learning</li>
+                    <li>Big Data Technologies</li>
+                </ul>
+            </section>
+
+            <section class="soft-skills">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Interpersonal Skills</li>
+                    <li>Teamwork Skills</li>
+                    <li>Quick Learner</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </section>
+
+            <section class="interests">
+                <h3>Interests</h3>
+                <ul>
+                    <li>Data Analysis</li>
+                    <li>Data Science</li>
+                </ul>
+            </section>
+
+            <section class="certifications">
+                <h3>Certifications</h3>
+                <div class="certification-gallery">
+                    <div class="certification-item">
+                        <img src="{% static 'images/capstone.png' %}" alt="Data Science Capstone">
+                        <p>Data Science Capstone</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="{% static 'images/R.png' %}" alt="Data Science Certification Training - R Programming">
+                        <p>Data Science Certification Training - R Programming</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="{% static 'images/python.png' %}" alt="Data Science with Python">
+                        <p>Data Science with Python</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="{% static 'images/machine.png' %}" alt="Machine Learning">
+                        <p>Machine Learning Specialization</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="{% static 'images/data.png' %}" alt="Data Scientist">
+                        <p>Data Scientist</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="{% static 'images/MongoDB.png' %}" alt="MongoDB Developer and Administrator">
+                        <p>MongoDB Developer and Administrator</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="notes">
+            <h3>Anamil</h3>
+            <p>"Anamil" - Arabic Sign Language Translation Application</p>
+            <p>The "Anamil" application was my graduation project. This application helps translate Arabic sign language, facilitating communication for people with hearing disabilities.</p>
+            <video controls class="note-video">
+                <source src="{% static 'videos/anamel_vide.mov' %}" type="video/mp4">
+            </video>
+        </aside>
+    
+        <footer>
+            <p>Alhanouf Aluhydan</p>
+        </footer>
+    </div>
+</body>
+</html>
