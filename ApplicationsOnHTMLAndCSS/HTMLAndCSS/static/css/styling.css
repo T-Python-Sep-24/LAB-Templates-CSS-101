@@ -8,24 +8,17 @@
     color: white;
 }
 
-li,
-a {
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-header img {
+.cssIntroheader img {
     height: 70px;
 }
 
-body {
+.cssIntrobody {
     height: 125vh;
     margin-top: 80px;
     padding: 30px;
 }
 
-header {
+.cssIntroheader {
     position: fixed;
     display: flex;
     background-color: #34353c;
@@ -39,7 +32,7 @@ header {
     border-radius: 0 0 10px 10px;
 }
 
-header * {
+.cssIntroheader * {
     background-color: #34353c;
     display: inline;
 }
@@ -49,6 +42,9 @@ header * {
 }
 
 .navlinks li a {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
     color: whitesmoke;
     transition: all 0.3s ease 0s;
 }
