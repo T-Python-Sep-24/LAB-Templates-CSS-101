@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Intro</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
 
     <style>
       body {
@@ -43,10 +42,6 @@
 
       #id-selector {
         color: red;
-      }
-
-      * {
-        font-weight: lighter;
       }
 
       /* Colors and Backgrounds */
@@ -157,7 +152,11 @@
     </style>
   </head>
   <body>
-    <header>CSS Introduction</header>
+   
+    <header>
+      <h2>CSS Introduction</h2>
+    </header>
+
 
     <main>
       <!-- Syntax and Selectors -->
@@ -170,7 +169,7 @@
           This is a <strong>class selector</strong> example.
         </p>
         <p id="id-selector">This is an <strong>ID selector</strong> example.</p>
-        <p>*This is a <strong>universal selector</strong> example.</p>
+        
       </section>
 
       <div class="dotted-divider"></div>

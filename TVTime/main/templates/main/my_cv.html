@@ -1,13 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-</head>
-<body>
+  <head>
+    {% load static %}
 
-    <h1>Hi</h1>
-    
-</body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+
+      /* Header */
+      header {
+        background-color: #fff;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px 20px;
+        transition: 0.3s;
+        font-size: 1rem;
+        border-radius: 5px;
+      }
+
+      nav ul li a:hover {
+        background-color: #ff5722;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .profile-pic {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 40px;
+      }
+
+      .hero h1 {
+        max-width: 600px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: #ff5722;
+        line-height: 1.6px;
+        margin-bottom: 20px;
+      }
+
+      /* About Section */
+      #about {
+        padding: 50px 20px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      #about h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+
+      .about-list {
+        list-style: none;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .about-list li {
+        position: relative;
+        padding-left: 5px;
+        margin-bottom: 10px;
+      }
+
+      .about-list li::before {
+        content: "•";
+        color: #ff5722;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: -2px;
+      }
+
+      /* Projects Section */
+      #projects {
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      #projects h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .project-card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .project-info {
+        padding: 15px;
+      }
+
+      .project-info h3 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        color: #ff5722;
+        
+      }
+
+      .project-info p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      .view-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .view-btn:hover {
+        background-color: #333;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        #projects h2 {
+          font-size: 2rem;
+        }
+
+        .project-info h3 {
+          font-size: 1.3rem;
+        }
+
+        .project-info p {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        border-top: 2px solid #ccc;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-item {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .footer-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #ff5722;
+      }
+
+      .footer-item p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      /* Social Icons Styling */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+      }
+
+      .social-icons a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        color: #333;
+        transition: 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #333;
+        border-color: #ff5722;
+      }
+
+      .footer-bottom {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      /* Responsive Design for Footer */
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+        }
+
+        .footer-item {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="hero">
+        <img
+          src="{% static 'images/Image 4.png' %}"
+          alt="My Pic"
+          class="profile-pic"
+        />
+        <div>
+          <h1>Hello, I'm Khulood</h1>
+          <p>
+            Soon to be Full Stack Web Developer & Digital Transformation
+            Specialist
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <ul class="about-list">
+        <li>Web Developer</li>
+        <li>iOS Developer</li>
+        <li>UI/UX Designer</li>
+        <li>Digital Transformation</li>
+        <li>Project Managment</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="{% static 'images/Space.png' %}" alt="Project 1" />
+          <div class="project-info">
+            <h3>iOS App - Space Travel</h3>
+            <p>
+                An app that helps users gain more knowledge about space and all the important space discoveries by NASA.
+            </p>
+            <a
+              href="https://www.behance.net/gallery/185820173/Solar-Voyages-NASA-Space-Apps-Challenge-Project"
+              target="_blank"
+              class="view-btn"
+              >View Details</a
+            >
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="{% static 'images/Ball.png' %}" alt="Project 2" />
+          <div class="project-info">
+            <h3>iOS App - Knowledge Game</h3>
+            <p>
+                A game app for all ages to have fun and learn new information that you can share with your family and friends.
+            </p>
+            <a
+              href="https://www.behance.net/gallery/186407349/Magic-Ball-IOS-App-UXUI-Case-Study"
+              target="_blank"
+              class="view-btn"
+              >View Details</a
+            >
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="{% static 'images/Free.png' %}" alt="Project 3" />
+          <div class="project-info">
+            <h3>UI/UX Case Study</h3>
+            <p>
+              A case study for a mobile app
+              connect freelancers and businesses owners to exchange digital services in one platform.
+            </p>
+            <a
+              href="https://www.behance.net/gallery/186406703/Unilancer-IOS-App-UXUI-Case-Study"
+              target="_blank"
+              class="view-btn"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <h3>Phone</h3>
+          <p>0533556787</p>
+        </div>
+        <div class="footer-item">
+          <h3>Email</h3>
+          <p>khulood.gmo@gmail.com</p>
+        </div>
+        <div class="footer-item">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

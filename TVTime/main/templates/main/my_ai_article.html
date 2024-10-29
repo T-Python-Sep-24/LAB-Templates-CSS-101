@@ -1,13 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Article</title>
-</head>
-<body>
+  <head>
+    {% load static %}
 
-    <h1>Hi</h1>
-    
-</body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Article</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        display: flex;
+        font-size: 14px;
+        background-color: #333;
+        justify-content: center;
+        list-style: none;
+        padding: 10px;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .ai-applications-list {
+        list-style: none; 
+        padding-left: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .ai-applications-list li {
+        position: relative;
+        padding-left: 20px; 
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .ai-applications-list li::before {
+        content: "•";
+        color: #ff5722;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 0; 
+        top: 0;
+      }
+
+      /* Main Content */
+      main {
+        padding: 30px;
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px 0;
+      }
+
+      video {
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+      }
+
+      /* Aside Styles */
+      aside {
+        background-color: #f4f4f4;
+        padding: 15px;
+        margin: 20px 0;
+        border-left: 4px solid #ff5722;
+      }
+
+      /* Footer Styles */
+      footer {
+        margin-top: 40px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+        }
+      }
+
+      /* CSS Transitions */
+      img,
+      video {
+        transition: transform 0.3s, opacity 0.3s;
+      }
+
+      img:hover,
+      video:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The AI Revolution</h1>
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#future">Future</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Overview Section -->
+      <section id="overview">
+        <h2>What is AI?</h2>
+        <p>
+          AI, also known as Artificial intelligence, is a technology with
+          human-like problem-solving capabilities. AI in action appears to
+          simulate human intelligence—it can recognize images, write poems, and
+          make data-based predictions. Modern organizations collect large data
+          volumes from diverse sources, such as smart sensors, human-generated
+          content, monitoring tools, and system logs. Artificial intelligence
+          technologies analyze the data and use it to assist business operations
+          effectively. For example, AI technology can respond to human
+          conversations in customer support, create original images and text for
+          marketing, and make smart suggestions for analytics. Ultimately,
+          artificial intelligence is about making software smarter for
+          customized user interactions and complex problem-solving.
+        </p>
+      </section>
+
+      <!-- Applications Section -->
+      <section id="applications">
+        <h2>Applications of AI</h2>
+        <p>AI has diverse applications such as:</p>
+        <ul class="ai-applications-list">
+          <li>business intelligence</li>
+          <li>healthcare</li>
+          <li>education</li>
+          <li>finance</li>
+          <li>manufacturing</li>
+          <li>Retail</li>
+          <li>Transportation</li>
+          <li>Energy</li>
+          <li>Government</li>
+        </ul>
+        <img
+          src="{% static 'images/ai-applications.jpeg' %}"
+          alt="AI Applications"
+        />
+      </section>
+
+      <!-- Future Section -->
+      <section id="future">
+        <h2>The Future of AI</h2>
+        <p>
+          With the rapid advancements in AI, its future holds immense
+          potential...
+        </p>
+        <video controls>
+          <source src="{% static 'videos/ai-future.mp4' %}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+
+    <!-- Aside -->
+    <aside>
+      <h3>Did You Know?</h3>
+      <p>AI can analyze data faster than any human can.</p>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+      <p>By: Khulood</p>
+    </footer>
+  </body>
 </html>
