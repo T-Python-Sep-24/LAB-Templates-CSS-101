@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <title>Home</title>
+</head>
+<body id=" home">
+
+    <header>
+        <h1>Welcome to My Project</h1>
+        <nav>
+            <a href="{% url 'myapp:about' %}">About</a>
+            <a href="{% url 'myapp:contact' %}">Contact</a>
+            <a href="{% url 'myapp:cv' %}">CV</a>
+            <a href="{% url 'myapp:ai' %}">THE AI REVOLUTION</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Introduction</h2>
+        <p>This is a project to learn HTML and CSS.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Project</p>
+    </footer>
+</body>
+</html>

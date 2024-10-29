@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <title>My CV</title>
+</head>
+<body>
+
+    <header>
+        <h1>My CV</h1>
+        <nav>
+            <a href="{% url 'myapp:home' %}">Home</a>
+            <a href="{% url 'myapp:about' %}">About</a>
+            <a href="{% url 'myapp:contact' %}">Contact</a>
+            <a href="{% url 'myapp:ai' %}">THE AI REVOLUTION </a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Detail-oriented Computer Science graduate with a strong background in developing impactful projects and training in data visualization, system automation, and web development. Proven ability to enhance operational efficiency through the design and implementation of customized software solutions.</p>
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            <h3>Bachelor's in Computer Science</h3>
+            <p>Yanbu Industrial College, Yanbu – KSA <br> September 2019 – August 2024</p>
+            <p>GPA: 3.26 / 4.00</p>
+            <p><strong>Baby World Website</strong>: Developed a website using HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <h3>Cooperative Training</h3>
+            <p>YANSAB - SABIC <br> January 2024 - August 2024</p>
+            <ul>
+                <li><strong>Ibtikar Dashboard Enhancement and Data Visualization</strong>: Designed to leverage employees' innovative ideas; enhanced a Power BI dashboard with real-time SharePoint data, key metrics, and ratios.</li>
+                <li><strong>Master System</strong>: Streamlined the process of requesting new systems and tracking existing systems by creating a Master System form using InfoPath.</li>
+                <li><strong>Enhanced Competency for Leaders System</strong>: Improved accuracy in the test application process through automation; developed a form request in InfoPath, stored submissions in a SharePoint list, and redesigned the dashboard with division-specific pages and restricted access.</li>
+                <li><strong>Redesign of Yansab Portal's Main Page</strong>: Utilized HTML, CSS, and JavaScript to redesign the portal.</li>
+            </ul>
+            <h3>Web Development with Python</h3>
+            <p>Tuwaiq Academy <br> September 2024 - Present</p>
+        </section>
+
+        <section>
+            <h2>Volunteer Work Experience</h2>
+            <ul>
+                <li><strong>Volunteer Graduation Ceremony Recognition</strong>, Yanbu Industrial College (June 2023)</li>
+                <li><strong>Ghars Club</strong>, Yanbu Industrial College (May 2023)</li>
+                <li><strong>Volunteer Club</strong>, Yanbu Industrial College (May 2022)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certificates</h2>
+            <ul id="wo">
+                <li class="c"><strong>Working with InfoPath 2013 in SharePoint</strong> | Udemy (May 2024)</li>
+                <li class="c"><strong>Machine Learning for Beginners</strong> | Simplilearn Skill Up (October 2023)</li>
+                <li class="c"><strong>Applying Power BI' s Advanced Analysis Features</strong> | Skillsoft (July 2024)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Professional Skills</h2>
+            <p><strong>Technical Skills</strong>: HTML, CSS, JavaScript, Java, C, Python, SharePoint, InfoPath, Power BI.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Project</p>
+    </footer>
+</body>
+</html>
