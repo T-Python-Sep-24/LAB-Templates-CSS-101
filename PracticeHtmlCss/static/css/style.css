@@ -7,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Headings */
 h1 {
     color: #0056b3;
     font-size: 2em;
@@ -36,7 +35,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Image Styling */
 img {
     width: 100%;
     max-width: 400px;
@@ -73,7 +71,6 @@ th {
     color: white;
 }
 
-/* Form Styling */
 form {
     max-width: 500px;
     margin: 20px auto;
