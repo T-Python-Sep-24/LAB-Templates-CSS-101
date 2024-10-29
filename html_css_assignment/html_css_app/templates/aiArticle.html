@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence</title>
+    <link rel="stylesheet" href="{% static 'css/ai_article_styles.css' %}">
+
+</head>
+<body>
+<nav class="main-nav">
+    <ul>
+        <li><a href="{% url 'html_css_app:main_view'%}">Home</a></li>
+        <li><a href="{% url 'html_css_app:html_view'%}">Photography Portfolio</a></li>
+        <li><a href="{% url 'html_css_app:css_view'%}">Styled Photography Portfolio</a></li>
+        <li><a href="{% url 'html_css_app:cv_view'%}">About Me</a></li>
+    </ul>
+</nav>
+
+<nav class="section-nav">
+    <ul>
+        <li><a href="#hero" title="Top"></a></li>
+        <li><a href="#intro" title="Introduction"></a></li>
+        <li><a href="#definition" title="Definition"></a></li>
+        <li><a href="#ai_type" title="AI Types"></a></li>
+        <li><a href="#prosAndCons" title="Pros And Cons"></a></li>
+        <li><a href="#impact" title="Impact"></a></li>
+        <li><a href="#future" title="Future"></a></li>
+    </ul>
+</nav>
+
+<section id="hero" class="hero">
+    <img src="{% static 'images/ai.avif' %}">
+    <div class="hero-content">
+        <h1>The Rise of Artificial Intelligence</h1>
+        <p>BY HmzH DabbaH</p>
+        <p>Oct 29, 2024</p>
+    </div>
+</section>
+
+<article class="article">
+    <div class="article-meta">
+        <p>Published on Oct 29, 2024</p>
+    </div>
+
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>With all the hype around Artificial Intelligence, robots, self-driving cars, etc., it can be easy to assume that AI doesn’t impact our everyday lives. In reality, most of us encounter Artificial Intelligence in some way or another almost daily. From the moment you wake up to check your smartphone to watching another Netflix-recommended movie, AI has quickly made its way into our everyday lives. According to a study by Statista, the global AI market is set to grow up to 54 percent every single year. But what exactly is AI? Will it serve mankind well in the future? There are tons of advantages and disadvantages to artificial intelligence, which we’ll discuss in this article. But before we jump into AI's pros and cons, let us glance over what AI is.</p>
+    </section>
+
+    <section id="definition">
+        <h2>What Is Artificial Intelligence?</h2>
+        <p>Before we jump on to the advantages and disadvantages of Artificial Intelligence, let us understand what AI is in the first place. From a bird's eye view, AI provides a computer program the ability to think and learn on its own. It is a simulation of human intelligence (hence, artificial) into machines to do things that we normally rely on humans. This technological marvel extends beyond mere automation, incorporating a broad spectrum of AI skills - abilities that enable machines to understand, reason, learn, and interact in a human-like manner.</p>
+    </section>
+
+    <div class="quote">
+        "The development of artificial intelligence could be the biggest event in human history. It might also be the last, unless we learn how to avoid the risks."
+    </div>
+
+    <section id="ai_type">
+        <h2>Types of AI</h2>
+        <p>There are three main types of AI based on its capabilities - weak AI, strong AI, and super AI.</p>
+        <ul>
+            <li>Weak AI - Focuses on one task and cannot perform beyond its limitations (common in our daily lives)</li>
+            <li>Strong AI - Can understand and learn any intellectual task that a human being can (researchers are striving to reach strong AI)</li>
+            <li>Super AI - Surpasses human intelligence and can perform any task better than a human (still a concept)</li>
+
+        </ul>
+
+    </section>
+
+    <section id="prosAndCons">
+        <p>Here's a quick video to help you understand what artificial intelligence is and its advantages and disadvantages. </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uMzUB89uSxU?si=5Cn8L62AVKDKu82P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <h2>Advantages of Artificial Intelligence</h2>
+        <ol>
+            <li>Reduction in Human Error
+                <p>One of the most significant benefits of Artificial Intelligence is that it can significantly reduce errors and increase accuracy and precision. The decisions taken by AI in every step are decided by information previously gathered and a certain set of algorithms. When programmed correctly, these errors can be reduced to null.</p>
+            </li>
+
+            <li>Decision-Making
+                <p>On of the noted pros of AI is decision-making. AI enhances decision-making by leveraging vast data to identify patterns and trends often invisible to humans. Machine learning algorithms can analyze historical data and predict future outcomes, allowing businesses and individuals to make informed decisions quickly and accurately. AI's ability to process information at high speeds reduces the time required for decision-making, thus providing a competitive advantage in dynamic environments.</p>
+            </li>
+            <li>Zero Risks
+                <p>Another significant benefit of AI is that humans can overcome many risks by letting AI robots do them for us. Whether defusing a bomb, going to space, or exploring the deepest parts of oceans, machines with metal bodies are resistant and can survive unfriendly atmospheres. Moreover, they can provide accurate work with greater responsibility and not wear out quickly.</p>
+            </li>
+        </ol>
+        <br>
+        <h2>Disadvantages of Artificial Intelligence</h2>
+        <ol>
+            <li>Encouraging Human Laziness
+                <p>The increasing reliance on AI for tasks ranging from mundane chores to complex decision-making can lead to human laziness. As AI systems take over more responsibilities, individuals might become less inclined to develop their skills and knowledge, relying excessively on technology.
+                    This dependency can diminish critical thinking and problem-solving abilities, as people might defer to AI solutions without questioning their validity or exploring alternatives. Over time, this could lead to a less capable workforce.</p>
+            </li>
+            <li>Privacy Concerns
+                <p>AI systems often require vast amounts of data to function effectively, which can lead to significant privacy concerns. Personal data collection, storage, and analysis can be intrusive, exposing sensitive information without individuals' consent.
+                AI-driven surveillance systems and data mining practices can erode personal privacy, leading to potential misuse of data by corporations, governments, or cybercriminals. Additionally, there is a risk of data breaches and leaks, which can compromise personal and financial information, leading to identity theft and other forms of exploitation.</p>
+            </li>
+            <li>Lack of Common Sense
+                <p>Despite their advanced capabilities, AI systems often need more common sense reasoning.
+                They can process and analyze vast amounts of data but need help understanding context, making intuitive judgments, or adapting to new and unforeseen situations. This limitation can lead to errors or inappropriate actions in scenarios that require nuanced understanding and flexibility.
+                Unlike humans, AI lacks the innate ability to grasp everyday knowledge and social norms, which can result in logically correct decisions but are practically or ethically flawed.</p>
+            </li>
+
+        </ol>
+    </section>
+
+    <section id="impact">
+        <h2>The Impact of AI Today</h2>
+        <p>Artificial intelligence has already begun to revolutionize industries across the board. Healthcare systems are using AI to detect diseases earlier and more accurately than ever before. Financial institutions are leveraging machine learning for fraud detection and risk assessment. Even creative industries are exploring AI's potential in generating art and music.</p>
+        <h2>Importance of Artificial Intelligence</h2>
+        <p>Artificial intelligence enables machines to learn from experience, adapt to new information, and perform tasks that typically require human intelligence. Many contemporary AI applications, such as autonomous vehicles, smart home devices, and language translation tools, heavily depend on deep learning and natural language processing. By leveraging these technologies, computers can be trained to perform specific tasks by analyzing vast amounts of data and identifying patterns within that data.</p>
+    </section>
+
+    <section id="future">
+        <h2>Looking to the Future</h2>
+        <p>As we stand on the brink of new AI breakthroughs, questions about ethics, regulation, and the future of human work become increasingly important. The next decade will be crucial in determining how we integrate these powerful technologies into our society while preserving human values and ensuring equitable access to AI's benefits.</p>
+    </section>
+</article>
+
+<section class="next-article">
+    <h2>NEXT ARTICLE</h2>
+    <h3>Ethics in Artificial Intelligence</h3>
+    <a href="#" class="button">Continue Reading →</a>
+</section>
+
+<footer class="footer">
+    <p>© 2024 AI Insights. All rights reserved.</p>
+</footer>
+</body>
+</html>

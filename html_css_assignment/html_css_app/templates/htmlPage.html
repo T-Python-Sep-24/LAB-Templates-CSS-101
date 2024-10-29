@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Portfolio</title>
+    <style>
+        * {
+            font-family: "Sofia", sans-serif;
+        }
+        body {
+            font-family: "Sofia", sans-serif;
+            margin: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .photo-item {
+            width: 200px;
+            text-align: center;
+        }
+        .photo-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .upload-form {
+            margin-top: 20px;
+        }
+        nav {
+            padding: 10px 30px 10px 30px;
+        }
+        nav a {
+            padding: 0 30px 30px 0; text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'html_css_app:main_view' %}">Main <img src=""/> </a>
+        <a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a>
+        <a href="{% url 'html_css_app:css_view' %}">css</a>
+        <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
+        <a href="{% url 'html_css_app:cv_view' %}">My CV</a>
+    </nav>
+    <hr>
+    <div>
+        <h1>Photography Portfolio</h1>
+        <h4>Photography is my passion, I love capturing the beauty of the world, revisiting old memories and showing others my perspective of things and the beautiful details of various scenes</h4>
+        <p>Nature is filled with amazing details for whom who appreciate it and think deeply about what is around them</p>
+        <p>Human being also build nice architectures, and formed things amuse the eyes </p>
+    </div>
+    {% for photo in photos %}
+
+        <div class="photo-item">
+        <img src="{% static photo.photoName %}" width="230" height="350" alt="img-{{ photo.id }}">
+        <br>
+        <p id="likeCount-{{ photo.id }}" data-likes=" {{ photo.likes }}" data-id = "{{photo.id}} ">Likes: {{ photo.likes }}</p>
+        <input class="like-btn" type="button" value="Like ❤ " onclick="updateLikes({{ photo.id }})">
+        {% for cap in photo.captions %}
+            <p>{{ cap }}</p>
+        {% endfor %}
+        <p>Comments:</p>
+        <div id="commentsOf-{{ photo.id }}">
+
+        </div>
+        <label>
+            <input id="commentImg-{{ photo.id }}" type="text" placeholder="Leave Your Comment">
+        </label>
+        <input type="button" value="Add Comment" onclick="addComment({{ photo.id }})">
+    </div>
+
+    {% endfor %}
+
+
+    <div class="photo-item gallery" id="gallery">
+
+    </div>
+    <div class="upload-form">
+        <h2>Upload a Photo</h2>
+        <form id="photoForm">
+            <label for="photo">Choose a photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+            <label for="comment">Add a comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+            <button type="button" id="addBtn">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        // function to update likes of the images
+        function updateLikes(photoId) {
+            const likeCountElement = document.getElementById(`likeCount-${photoId}`);
+            let currentLikes = parseInt(likeCountElement.getAttribute("data-likes")) || 0;
+
+            // Increment likes
+            currentLikes++;
+            likeCountElement.setAttribute("data-likes", currentLikes);
+            likeCountElement.textContent = `Likes: ${currentLikes}`;
+        }
+
+        // function to add comments to the images
+        function addComment(commImgId) {
+            const comments_space = document.getElementById(`commentsOf-${commImgId}`);
+            const commentInput = document.getElementById(`commentImg-${commImgId}`);
+
+
+            if (commentInput && comments_space) {
+                const commentText = commentInput.value;
+                const theComment = document.createElement("p");
+                theComment.innerText = commentText;
+                comments_space.appendChild(theComment);
+
+
+                commentInput.value = "";
+            } else {
+                console.error("Comment input or comment space not found.");
+            }
+        }
+
+        // Main function to add images
+        document.getElementById("addBtn").addEventListener("click", addImg);
+        let new_imgs_id = 10; // Initialize new images ID starting from 10
+        function addImg(event) {
+            // Increment ID for the next image
+            new_imgs_id++;
+            event.preventDefault();
+
+            const photoFile = document.getElementById("photo").files[0];
+            const commentText = document.getElementById("comment").value;
+            let new_imgs_likes_counter = 1;
+
+            if (photoFile && commentText) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    // Create elements for the new photo and comment
+                    const photoItem = document.createElement("div");
+                    photoItem.classList.add("photo-item");
+
+                    const img = document.createElement("img");
+                    img.src = event.target.result;
+
+                    const likes = document.createElement("p");
+                    likes.id = `likeCount-${new_imgs_id}`;
+                    likes.setAttribute("data-likes", new_imgs_likes_counter);
+                    likes.innerText = `Likes: ${new_imgs_likes_counter}`;
+                    likes.setAttribute("data-id", new_imgs_id)
+
+                    const likesBtn = document.createElement("input");
+                    likesBtn.type = "button";
+                    likesBtn.value = "Like ❤";
+                    likesBtn.onclick = function() {
+                        updateLikes(likes.getAttribute("data-id"));
+                    };
+
+                    const comment = document.createElement("p");
+                    comment.textContent = commentText;
+
+                    const comments_div = document.createElement("div");
+                    comments_div.id = `commentsOf-${new_imgs_id}`;
+                    comments_div.setAttribute("data-id", new_imgs_id);
+                    const label = document.createElement("label");
+                    label.innerHTML = `Comment: <input id="commentImg-${new_imgs_id}" type="text" placeholder="Leave Your Comment">`;
+
+                    const addButton = document.createElement("input");
+                    addButton.type = "button";
+                    addButton.value = "Add Comment";
+                    addButton.onclick = function() {
+                        addComment(comments_div.getAttribute("data-id"));
+                    };
+
+                    // Append elements to the photo item container
+                    photoItem.appendChild(img);
+                    photoItem.appendChild(likes);
+                    photoItem.appendChild(likesBtn);
+                    photoItem.appendChild(comment);
+                    photoItem.appendChild(comments_div);
+                    photoItem.appendChild(label);
+                    photoItem.appendChild(addButton);
+
+                    // Append the new photo item to the gallery
+                    document.getElementById("gallery").appendChild(photoItem);
+
+                    // Clear the form
+                    document.getElementById("photoForm").reset();
+
+
+                };
+                reader.readAsDataURL(photoFile);
+            }
+        }
+    </script>
+
+
+</body>
+</html>

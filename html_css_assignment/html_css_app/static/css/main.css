@@ -1,0 +1,229 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+    margin: 0;
+    background-color: #333;
+
+}
+
+nav {
+    background-color: #333;
+    padding: 25px ;
+    display: flex;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px 0 25px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.intro {
+    color: #fff;
+    padding: 25px;
+    border-bottom: 2px solid grey;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.gallery {
+
+
+}
+
+.img-cont {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.img-cont:hover {
+    transform: scale(1.05); /* Slightly zoom on hover */
+}
+
+.img-cont img {
+
+    border-bottom: 2px solid #333; /* Add a border below the image */
+}
+
+.img-cont p {
+    margin: 10px 0;
+}
+
+.like-btn {
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 90px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-btn:hover {
+    background-color: #ddd; /* Change color on hover */
+}
+.add-comment-btn {
+
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 120px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.upload-form h2 {
+    margin-bottom: 10px;
+}
+
+.upload-form label {
+    margin-top: 10px;
+    display: block;
+}
+
+.upload-form textarea {
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.upload-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.upload-form button:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+.album .responsive-container-block {
+  min-height: 75px;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  justify-content: center;
+
+}
+
+.album .responsive-container-block.bg {
+  max-width: 1320px;
+  margin: 0 0 0 0;
+  justify-content: space-between;
+}
+
+.album .img {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-radius: 5px
+}
+
+
+.album .responsive-container-block.img-cont {
+
+  max-width: 30%;
+  min-height: auto;
+  margin: 10px;
+  height: 100%;
+}
+
+
+.album .img {
+  height: 50%;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 1024px) {
+  .album .img {
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .album .img {
+    max-width: 32.5%;
+    margin: 0 0 0 0;
+  }
+
+
+  .album img-cont {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .album .img {
+    max-width: 49%;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .album .img {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .album .img-cont {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .album .img {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+}
