@@ -130,6 +130,106 @@ article h3 {
     transform: scale(1.05); /* Slightly increase button size on hover */
 }
 
+h2, h3 {
+    color: #333;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.goals-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row; /* Align cards horizontally */
+    gap: 15px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if screen width is too small */
+}
+
+.card {
+    border-radius: 6px;
+    color: white;
+    width: 230px; /* Set a fixed width for consistency */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem; /* Smaller font size for compact appearance */
+}
+
+.card-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem; /* Make header font smaller */
+}
+
+.card-danger {
+    background-color: #dc3545; /* Red color for danger card */
+}
+
+.card-warning {
+    background-color: #ffc107; /* Yellow color for warning card */
+    color: #333; /* Dark text for contrast */
+}
+
+.card-info {
+    background-color: #17a2b8; /* Blue color for info card */
+}
+
+.card-success {
+    background-color: #28a745; /* Green color for success card */
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+.table-section {
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+}
+
+.styled-table thead th {
+    background-color: #ffc107; /* Yellow background for the header, similar to your image */
+    color: #333; /* Darker text for contrast */
+    font-size: 1.2rem; /* Larger font size for the header */
+    padding: 12px; /* Padding for a neat look */
+    font-weight: bold;
+    border: 1px solid #ccc; /* Border to match with the body cells */
+}
+
+.styled-table tbody td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border for cell separation */
+    background-color: #fff; /* White background for a clean look */
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for alternating rows */
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1; /* Light highlight on row hover for interactivity */
+}
+
+.image-section {
+    text-align: center;
+    margin: 30px 0;
+}
 /* Image with Transition */
 .img-fluid {
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
