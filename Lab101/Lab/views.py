@@ -53,3 +53,7 @@ def thingsIlove_view(request: HttpRequest):
 def thingsIlove_styled_view(request: HttpRequest):
     context = get_context(request)
     return render(request, "Lab/pageTwo.html", context)
+
+def ai_veiw(request: HttpRequest):
+
+    return render(request, "Lab/ai.html")
