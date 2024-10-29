@@ -1,0 +1,167 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    animation: fadeInLogo 2s ease-in-out;
+}
+
+@keyframes fadeInLogo {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.header h1 {
+    animation: fadeInDown 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* About Heading Styling */
+.about-heading {
+    font-size: 2.5rem; 
+    font-weight: 700;
+    color: #333; 
+    position: relative;
+}
+
+/* Decorative Line Under Heading */
+.decorative-line {
+    width: 120px; /* Width of the line */
+    height: 4px; /* Height of the line */
+    background-color: #FF6347; 
+    margin-top: -10px;
+    border-radius: 4px; /* Rounded corners for a softer effect */
+}
+
+/* About Content Wrapper */
+.about-content-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7; 
+    padding: 30px; 
+    margin-top: 20px;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* About Text */
+.about-text {
+    font-size: 1.15rem; 
+    color: #555; 
+    line-height: 1.8; 
+    text-align: justify;
+}
+
+
+/* Projects Section Styling */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+
+/* Skills Section */
+.skills-section .skill-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.skills-section .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Contact Information Section Styling */
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card i {
+    font-size: 1.5rem;
+    color: #FF6347; /* Matching the theme color */
+}
+
+.contact-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+}

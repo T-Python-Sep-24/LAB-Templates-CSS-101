@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Article</title>
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+      <!-- Custom Styles -->
+      <link rel="stylesheet" href="{% static 'css/introduction/styles.css' %}">
+</head>
+<body>   
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'introduction' %}">
+                <img src="{% static 'images/logo_1.png' %}" alt="Saudi Welcome" class="logo-image" style="height: 40px;">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'introduction' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Riyadh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'article' %}">AI Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'book_event' %}" class="btn btn-custom">Book your Stand</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="content container mt-5">
+    <article class="bg-light p-5 rounded shadow-sm">
+        <h2 class="text-center mb-5">AI and Riyadh Expo 2030: Shaping the Future</h2>
+        
+        <!-- AI and Future Section -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img src="{% static 'images/ai_future.jpeg' %}" alt="AI in Future" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="article-text">Artificial Intelligence (AI) is playing a critical role in shaping the vision of Riyadh Expo 2030. By integrating AI-driven technologies, the event aims to provide an enhanced, personalized experience for visitors while also ensuring the efficient management of resources. The Expo will showcase how AI can revolutionize tourism, sustainability, and urban development in line with Saudi Vision 2030.</p>
+            </div>
+        </div>
+
+        <!-- Transforming Visitor Experience Section -->
+        <h3 class="mt-5">Transforming Visitor Experience</h3>
+        <div class="row my-4">
+            <div class="col-md-6 order-md-2">
+                <img src="{% static 'images/ai_visitor_experience.jpeg' %}" alt="AI Transforming Visitor Experience" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 order-md-1 d-flex align-items-center">
+                <p class="article-text">AI technologies will be utilized to offer interactive and immersive experiences for visitors. From AI-powered guides that provide personalized recommendations to virtual reality tours of historical Saudi landmarks, the integration of AI promises to make Riyadh Expo 2030 an unforgettable event for all attendees.</p>
+            </div>
+        </div>
+
+        <!-- Sustainable Development Section -->
+        <h3 class="mt-5">Sustainable Development</h3>
+        <div class="row my-4">
+            <div class="col-md-6">
+                <img src="{% static 'images/ai_sustainability.jpeg' %}" alt="AI for Sustainability" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="article-text">Sustainability is a core value of Riyadh Expo 2030, and AI plays a key role in this initiative. Smart energy management systems, predictive maintenance for facilities, and AI-driven environmental monitoring will help minimize the carbon footprint and optimize resource usage, making the Expo an exemplar of sustainable urban planning.</p>
+            </div>
+        </div>
+
+        <!-- AI for Enhanced Security Section -->
+        <h3 class="mt-5">AI for Enhanced Security</h3>
+        <div class="row my-4">
+            <div class="col-md-6 order-md-2">
+                <img src="{% static 'images/ai_security.jpeg' %}" alt="AI for Enhanced Security" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 order-md-1 d-flex align-items-center">
+                <p class="article-text">AI will also be deployed to ensure the safety and security of visitors. Through advanced surveillance systems, AI can detect unusual activities in real-time, ensuring a secure environment. Additionally, facial recognition technologies will streamline the entry process, making it faster and more efficient for attendees.</p>
+            </div>
+        </div>
+
+        <!-- A Vision for the Future Section -->
+        <h3 class="mt-5">A Vision for the Future</h3>
+        <div class="row my-4">
+            <div class="col-md-6">
+                <img src="{% static 'images/ai_vision_future.jpeg' %}" alt="AI Vision for Future" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <p class="article-text">Riyadh Expo 2030 is not just about showcasing technology—it’s about envisioning a future where AI works hand in hand with human ingenuity to create better living environments, improve efficiencies, and bring communities together. The event will highlight Saudi Arabia’s commitment to technological progress and sustainability, setting a new benchmark for international expos.</p>
+            </div>
+        </div>
+        </div>
+    </article>
+</div>
+
+
+<footer class="bg-dark text-white text-center py-2">
+    <div class="container">
+        <small>&copy; 2024 Saudi Tourism. All Rights Reserved.</small>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

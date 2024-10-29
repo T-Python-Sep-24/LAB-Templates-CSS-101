@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RiyadhExpo 2030</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static 'css/introduction/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'introduction' %}">
+                    <img src="{% static 'images/logo_1.png' %}" alt="Saudi Welcome" class="logo-image" style="height: 40px;">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'introduction' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About Riyadh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'article' %}">AI Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'book_event' %}" class="btn btn-custom">Book your Stand</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>About Riyadh Expo 2030</h2>
+        <p>Riyadh Expo 2030 is an ambitious global event that aims to bring together nations, cultures, and ideas under one roof. The Expo is part of Saudi Vision 2030 and aims to showcase innovations in sustainability, technology, and culture. With its emphasis on future-forward thinking, Riyadh Expo 2030 will be a hub for collaboration, knowledge-sharing, and inspiration for the world.</p>
+        
+        <h3>Goals of Riyadh Expo 2030</h3>
+        <div class="goals-section">
+    <div class="card card-danger">
+        <div class="card-header"><h4>Promote sustainability and green initiatives</h4>
+        </div>
+        <div class="card-content">
+            <p>Encouraging a greener future by promoting renewable energy and eco-friendly practices.</p>
+        </div>
+    </div>
+    <div class="card card-warning">
+        <div class="card-header">  <h4>Encourage global collaboration and cultural exchange</h4></div>
+        <div class="card-content">
+            <p>Fostering partnerships and cultural exchange between participating countries.</p>
+        </div>
+    </div>
+    <div class="card card-info">
+        <div class="card-header"> <h4>Showcase advancements in technology and urban development</h4></div>
+        <div class="card-content">
+            <p>Presenting innovative solutions in technology and smart urban infrastructure.</p>
+        </div>
+    </div>
+    <div class="card card-success">
+        <div class="card-header"><h4>Support economic growth and tourism in Saudi Arabia</h4>
+        </div>
+        <div class="card-content">
+            <p>Boosting the economy through increased tourism and international investments.</p>
+        </div>
+    </div>
+</div>
+
+<h3>Key Features of Riyadh Expo 2030</h3>
+<div class="table-section">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sustainability</td>
+                <td>Focus on renewable energy and eco-friendly infrastructure throughout the Expo.</td>
+            </tr>
+            <tr>
+                <td>Cultural Exchange</td>
+                <td>Countries from around the world will present their cultures, offering visitors an immersive experience.</td>
+            </tr>
+            <tr>
+                <td>Technology and Innovation</td>
+                <td>Showcase of cutting-edge technologies in AI, urban development, and smart living solutions.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <div class="image-section">
+            <img src="{% static 'images/logo.png' %}" alt="Riyadh Expo 2030" style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-2">
+        <div class="container">
+            <small>&copy; 2024 Saudi Tourism. All Rights Reserved.</small>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
