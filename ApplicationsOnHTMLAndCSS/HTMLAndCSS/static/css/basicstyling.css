@@ -4,7 +4,6 @@
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #24252a;
     color: white;
 }
 
@@ -13,6 +12,7 @@
 }
 
 .cssIntrobody {
+    background-color: #24252a;
     height: 125vh;
     margin-top: 80px;
     padding: 30px;
