@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(244, 244, 249);
+    margin: 0;
+    padding: 0;
+    color:rgb(51, 51, 51)
+    ;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.header {
+    background:rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    transition: color 0.3s ease;
+}
+
+.header h1:hover {
+    color: rgb(0, 123, 255)
+    ;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color:rgb(85, 85, 85)
+    ;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.section {
+    background:rgb(255, 255, 255)
+    ;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section h2 {
+    border-bottom: 2px solid rgb(51, 51, 51);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 10px 0;
+}
+
+
+.section#education ul li:first-child {
+    font-weight: bold;
+}
+
+.section ul li:hover {
+    color: rgb(0, 123, 255);
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section:focus-within {
+    outline: 2px dashed rgb(0, 123, 255) ;
+}
+
+

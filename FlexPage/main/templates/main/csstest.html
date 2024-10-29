@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random HTML Page with Form</title>
+    <style>
+            body{
+                background-color: gray; 
+            }
+            h1{
+                text-align: center; 
+                background-color: slategrey;
+                color: #000;
+                font-size: 10px;
+                font-weight: initial;
+                direction: rtl;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #edit1{
+                color: darkslateblue;
+                width: 150px;
+                border: solid thin white;
+                padding: 30px;
+                margin: 25px;
+            }
+            .edit2{
+                border: solid thin blue;
+                margin: 10px 20px 15px 25px ;
+
+            }
+            .edit3{
+                border :solid thin black;
+                padding: auto;
+
+            }
+            .box1{
+                background-color: aquamarine;
+                color: chocolate;
+                height: 150px ;
+                width: 150px;
+                position: fixed;
+                text-align: center;
+                display: flex;
+                
+            }
+            #editForm input[type="text"],
+            #editForm input[type="email"],
+            #editForm input[type="password"],
+            #editForm input[type="number"],
+            #editForm button {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                padding: 8px;
+                border: 1px solid #333;
+                border-radius: 5px;
+            }
+            #editForm button {
+                background-color: darkslateblue;
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            #editForm button:hover {
+                background-color: slateblue;
+            }
+        
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Random Form Page</h1>
+        <p>Fill out the form below with some random information</p>
+    </header>
+    <hr>
+    <p id="edit1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+        Commodi suscipit repellat sapiente voluptates quae! Excepturi.<br>
+        veniam commodi harum laborum cumque, sapiente ad. Vel ipsa beatae<br>
+        quis voluptatum voluptates, repellendus modi!
+    </p>
+    <div class="edit2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ut?</div>
+    <hr>
+    <p class="edit3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> 
+        Eaque, earum a. Deserunt quibusdam doloribus temporibus?
+    </p>
+    <div class="box1">1</div>
+    <main>
+        <section>
+            <h2>Random Information Form</h2>
+            <form id="editForm" action="/submit_form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age">
+
+                <label>User Type:</label><br>
+                <input type="radio" id="student" name="user_type" value="student" required>
+                <label for="student">Student</label><br>
+                <input type="radio" id="professional" name="user_type" value="professional">
+                <label for="professional">Professional</label><br><br>
+
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Khaled. All rights reserved.</p>
+        <p>Contact: 054923456 | Email: <a href="mailto:edc@3edc.com">edc@3edc.com</a></p>
+        <p>
+    </footer>
+</body>
+</html>
