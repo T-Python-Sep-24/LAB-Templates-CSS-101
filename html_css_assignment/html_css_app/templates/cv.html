@@ -1,10 +1,187 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/cv_style.css' %}">
+
 </head>
 <body>
-    <h1> HmzH </h1>
+<nav class="top-nav">
+    <ul>
+        <li><a href="{% url 'html_css_app:main_view' %}">Home</a></li>
+        <li><a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a></li>
+        <li><a href="{% url 'html_css_app:css_view' %}">Styled Photography Portfolio</a></li>
+        <li><a href="{% url 'html_css_app:ai_article_view' %}">AI Blog</a></li>
+    </ul>
+</nav>
+
+<nav class="side-nav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <section id="home" class="home">
+        <div class="profile-container">
+            <img src="{% static 'images/myPic.jpg' %}" alt="Profile Picture" class="profile-pic">
+            <div class="profile-text">
+                <h1>Hmzh Dabbah</h1>
+                <h2>Full Stack Developer</h2>
+                <p>Crafting digital experiences with passion and precision.</p>
+                <p>I am Hmzh Dabbah, Graduated from king abdulaziz university in 2024,
+                    Faculty of Computing and Information Technology, majored in Information Technology,
+                    and specialized in Software Engineering, I'm Skilled in Java and python,
+                    in addition to SQL DB and web design and development.
+                    I am interested in photography, and using Editing tools such as Lightroom and Photoshop.
+                    I have been working on several projects and applications,
+                    I participated in developing "breachyApp" and "myPayments" Applications. To contact me for any purpose,
+                    my contact information are below. THANK YOU !.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate Full Stack Developer with over 4 years of experience in building web applications. I specialize in creating intuitive and performant solutions that solve real-world problems. My journey in technology started with a curiosity about how things work, which evolved into a career dedicated to crafting excellent digital experiences.</p>
+        <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical writing and mentoring.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-container">
+            <div class="skill-name">Java, JavaScript,Python</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Cloud Computing</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 55%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Web Development</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Project Management</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 76%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Back-end Development</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Front-end Development</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">AI</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Object Detection</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 50%"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-name">FitTtracker</div>
+            <p class="project-decs">CLI-based application written in python, I used various libraries, modules, and apis to enhance the user experience and data compatibility</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">Cloud Project</div>
+            <p class="project-decs">Deploying a website, database, load balancer, and domain resolution on azure cloud provider</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">Web Development</div>
+            <p class="project-decs">HTML, CSS, JS, AJAX, DOM, JSON, DB</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">Project Management</div>
+            <p class="project-decs">Agile, tasks management, team lead, java, git, github</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">Back-end Development</div>
+            <p class="project-decs">Django, flask, object detection, machine learning, AI models</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">Front-end Development</div>
+            <p class="project-decs">Figma, CSS, HTML</p>
+        </div>
+        <div class="project-container">
+            <div class="project-name">AI</div>
+            <p class="project-decs">Yolo-v8 model training, predicting, and annotation</p>
+        </div>
+
+    </section>
+
+    <section id="stats" class="stats-container">
+        <h2>My Achievements</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">4+</div>
+                <div class="stat-text">Years Experience</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">50+</div>
+                <div class="stat-text">Projects Completed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">30+</div>
+                <div class="stat-text">Happy Clients</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15+</div>
+                <div class="stat-text">Awards Won</div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts" class="contacts-container">
+        <h2>Contact Me</h2>
+        <div class="contacts">
+            <div class="contact-box">
+                <a href="https://github.com/HmzhDubh" target="_blank"><p> <img src="{% static 'images/github.png' %}" alt="github icon" width="30" height="30"> Github: HmzhDubh</p></a>
+            </div>
+            <div class="contact-box">
+                <p><img src="{% static 'images/old-typical-phone.png' %}" alt="phone icon" width="30" height="30"> Phone: +966 544581821</p>
+            </div>
+            <div class="contact-box">
+                <p><img src="{% static 'images/email.png' %}" alt="email icon" width="30" height="30"> Email: hamza.helal.d@gmail.com</p>
+            </div>
+            <div class="contact-box">
+                <a href="https://www.instagram.com/hhha.d" target="_blank"><p><img src="{% static 'images/instagram.png' %}" alt="instagram icon" width="30" height="30"> Instagram: @hhha.d</p></a>
+            </div>
+            <div class="contact-box">
+                <p><img src="{% static 'images/location-pin.png' %}" alt="location-pin icon" width="30" height="30"> Jeddah, Saudi Arabia</p>
+            </div>
+
+        </div>
+    </section>
+</div>
 </body>
 </html>
