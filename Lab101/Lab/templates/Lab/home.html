@@ -11,19 +11,14 @@
     
     <header>
         <h1>Assignment for HTML/CSS</h1>
-        <nav>
+        <nav class="navigtion" >
             <a href="{% url 'Lab:thingsIlove_view' %}">Basic Page (HTML)</a> |
             <a href="{% url 'Lab:thingsIlove_styled_view' %}">Styled Page (CSS)</a> |
-            <a href="{% url 'Lab:ai_veiw' %}">Mini Project 1</a> |
-            <a href="">Mini Project 2</a> 
-            
-
+            <a href="{% url 'Lab:ai_veiw' %}">AI Revolution</a> |
+            <a href="{% url 'Lab:cv_veiw' %}">CV</a> 
         </nav>
     </header>
 
-    <img src="{% static 'images/code.png' %}" width="600" height="600">
-    <footer>  <small>
-        Lab
-      </small></footer>
+    <img src="{% static 'images/code.png' %}" width="700" height="700">
 </body>
 </html>

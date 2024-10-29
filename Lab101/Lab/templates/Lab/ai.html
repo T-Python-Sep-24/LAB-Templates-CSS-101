@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI</title>
+    <title>The AI Revolution</title>
     {% load static %} 
     <link rel="stylesheet" href="{% static 'css/ai.css' %}">
 </head>
 <body>
-    <div class="wave-header">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#AFD3E2" fill-opacity="1" d="M0,64L60,74.7C120,85,240,107,360,138.7C480,171,600,213,720,224C840,235,960,213,1080,213.3C1200,213,1320,235,1380,245.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-    
     <header>
-        <nav>
-            <ul>
-                <li><a href="">Mini project</a></li>
-                <li><a href="{% url 'Lab:home_view' %}">Home</a></li>
-            </ul>
+        <nav class="navigtion">
+            <a href="{% url 'Lab:cv_veiw' %}">CV</a>
+            <a href="{% url 'Lab:home_view' %}">Home</a>
+            <button class="Login">Login</button>
         </nav>
-        <h1>AI Revolution</h1>
+        <h1>The AI Revolution</h1>
     </header>
-    <main>
-        <div class="sections-container">
-            <div class="interactive-section" tabindex="0">
-                <h3 class="section-title">AI Revolution</h3>
-                <div class="content">
-                    <p>The AI revolution has fundamentally changed the ways people collect and process data as well as transformed business operations across different industries. In general, AI systems are supported by three major aspects which are:  domain knowledge, data generation, and machine learning. Domain knowledge denotes the understanding and expertise of the real life scenario on why and how we need to engineer a task. The data aspect refers to the process of preparing databases required to feed on to the learning algorithms. Lastly, machine learning detects the patterns from the training data, predicts and performs tasks without being manually or explicitly programmed.</p>
-                    <img src="{% static 'images/ai.png' %}"style="width: 50%; max-width: 400px; border-radius:5px;">
-            </div>
     
+    <main>
+        <article>
+            <section class="intro">
+                <h2>Understanding the AI Revolution</h2>
+                <p>The AI revolution has fundamentally changed how people collect and process data, transforming business operations across various industries. At its core, AI systems rely on three major aspects: domain knowledge, data generation, and machine learning.</p>
+                <img src="{% static 'images/ai.png' %}" alt="AI Image" class="article-image">
+            </section>
+
+            <section class="key-aspects">
+                <h2>Three key attributes of AI technology.</h2>
+                <h5>Intelligent Decision Making</h5>
+                <p>AI simulates human intelligence to quickly solve problems, learning from data to make accurate decisions while reducing human reliance.</p>
+                <h5>Intentionality</h5>
+                <p>Intentionality allows AI to derive insights from real-time information, reflecting the social context of its users. This sophistication sets it apart from traditional machines.</p>
+                <h5>Adaptability and Prediction</h5>
+                <p>Machine learning helps AI identify patterns and adapt to changes, enhancing its predictive capabilities, as demonstrated by Gmail's Smart Compose feature. </p>
+                
+            </section>
+
+            <div class="References">
+                <h3>References:</h3>
+                <ul>
+                    <li><a href="https://www.wiz.ai/what-is-the-artificial-intelligence-revolution-and-why-does-it-matter-to-your-business/" target="_blank">discussions about AI to stay updated.</a></li>
+
+                </ul>
+            </div>
+        </article>
     </main>
     
-    </div>
+    <footer>
+        <p>&copy; 2024 AI Insights </p>
+    </footer>
 </body>
 </html>

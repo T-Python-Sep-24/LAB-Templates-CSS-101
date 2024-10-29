@@ -57,3 +57,7 @@ def thingsIlove_styled_view(request: HttpRequest):
 def ai_veiw(request: HttpRequest):
 
     return render(request, "Lab/ai.html")
+
+def cv_veiw(request: HttpRequest):
+
+    return render(request, "Lab/cv.html")
