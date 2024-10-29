@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/Tpruple.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    height: calc(100vh - 160px); /* Adjust height based on header and footer */
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px; /* Space between the message and buttons */
+}
+
+.welcome-message h2 {
+    color: #fff; /* Change to match your design */
+    font-size: 24px; /* Adjust size as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+}
+
+.button {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(115, 112, 112, 0.8);
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
