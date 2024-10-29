@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Intriduction</title>
+<style >
+    .ArrangeSurvey 
+    {
+    background:white;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: azure;
+    }
+    .ArrangeForm 
+    {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
+</head>
+<body>
+    <div class="ArrangeSurvey">
+        <img src="{% static 'images/National day pic.jpg' %}" alt="NationalDay" height="120" width="100%">
+        <br>
+        
+        <div class="ArrangeForm">
+            <p>
+            <b>Please Up Fill The Survey</b>
+            <hr>
+            </p>
+            <form>
+                <b>Your Name:</b>
+                <br>
+                <input type="text" name="name">
+                <br>
+                <br>
+                <b>Your Age:</b>
+                <br>
+                <input type="number" name="age">
+                <br>
+                <br>
+                <b>Your Gender:</b>
+                <br>
+                Male
+                <input type="radio" name="gender">
+                Female
+                <input type="radio" name="gender" value="female">
+                <br>
+            </form>
+            <hr>
+            <br>
+            <b>Which region in the Saudia Arabia are you from?</b>
+            <br>
+            <br>
+            <form>
+                <select>
+                    <option selected="selected">Select</option>
+                    <option>Al-riyadh</option>
+                    <option>Makkah al-Mukarramah</option>
+                    <option>Al-Madinah al-Munawwarah</option>
+                    <option>Al-Qasim</option>
+                    <option>Ash-Sharqiyah</option>
+                    <option>Asir </option>
+                    <option>Tabouk</option>
+                    <option>Haail</option>
+                    <option>Al-Hudud ash-Shamaliyah</option>
+                    <option>Jizan</option>
+                    <option>Najran</option>
+                    <option>Al-Bahah</option>
+                    <option>Al-Jawf</option>
+                </select>
+            </form>
+            <hr>
+            <p>
+            <b>Which of the following would you celebrate in the national day:</b>
+            </p>
+            <form>
+                <input type="checkbox">
+                Family Gathering
+                <br>
+                <input type="checkbox">
+                Fireworks show
+                <br>
+                <input type="checkbox">
+                Sports events 
+                <br>
+                <input type="checkbox">
+                Dress in national colors 
+                <br>
+                <input type="checkbox">
+                festival events 
+                <br>
+                <input type="checkbox">
+                others 
+            </form>
+            <hr>
+            <p>
+                <b>Would you intrested to organaize events for national day celebration?</b>
+            </p>
+            <form>
+                <input type="radio" name="option" value="def">
+                Definitely
+                <input type="radio" name="option" value="prop">
+                Probably
+                <input type="radio" name="option" value="prpnot">
+                Probably not
+                <input type="radio" name="option" value="defnot">
+                Definitely not
+                <input type="radio" name="option" value="uns">
+                Unsure
+            </form>
+                <br>
+                <hr>
+            <form>
+                <p>
+                <b>what do you want to say on this national day?</b>
+                </p>
+                <textarea name="textArea" rows="20" cols="70" style="overflow-y: auto; height: 100px;"></textarea>
+            </form>
+                <hr>
+            <form>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Start over">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
