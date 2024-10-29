@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Introduction</title>
+</head>
+<body>
+    <img src="{% static 'images/National day pic.jpg' %}" alt="NationalDay" height="120">
+    <br>
+    <p>
+        <b>Please Up Fill The Survey</b>
+    </p>
+    <form>
+        <b>Your Name:</b>
+        <br>
+        <input type="text" name="name">
+        <br>
+        <br>
+        <b>Your Age:</b>
+        <br>
+        <input type="number" name="age">
+        <br>
+        <br>
+        <b>Your Gender:</b>
+        <br>
+        Male
+        <input type="radio" name="gender">
+        Female
+        <input type="radio" name="gender" value="female">
+        <br>
+    </form>
+    <hr>
+    <b>The regions of Saudia Arabia:</b>
+    <br>
+    <table border="5" style="text-align: center; padding:0.5%; border-spacing:1cap;">
+        <th>Regions</th>
+        <tr>
+            <td>Riyadh</td>
+        </tr>
+        <tr>
+            <td>Makkah</td>
+        </tr>
+        <tr>
+            <td>Madinah</td>
+        </tr>
+        <tr>
+            <td>Qasim</td>
+        </tr>
+        <tr>
+            <td>Sharqiyah</td>
+        </tr>
+        <tr>
+            <td>Asir</td>
+        </tr>
+        <tr>
+            <td>Tabouk</td>
+        </tr>
+        <tr>
+            <td>Haail</td>
+        </tr>
+        <tr>
+            <td>ash-Shamaliyah</td>
+        </tr>
+        <tr>
+            <td>Jizan</td>
+        </tr>
+        <tr>
+            <td>Najran</td>
+        </tr>
+        <tr>
+            <td>Bahah</td>
+        </tr>
+        <tr>
+            <td>Jawf</td>
+        </tr>
+    </table>
+    <br>
+    <b>Which region in the Saudia Arabia are you from?</b>
+    <br>
+    <form>
+        <select>
+            <option selected="selected">Select</option>
+            <option>Al-riyadh</option>
+            <option>Makkah al-Mukarramah</option>
+            <option>Al-Madinah al-Munawwarah</option>
+            <option>Al-Qasim</option>
+            <option>Ash-Sharqiyah</option>
+            <option>Asir </option>
+            <option>Tabouk</option>
+            <option>Haail</option>
+            <option>Al-Hudud ash-Shamaliyah</option>
+            <option>Jizan</option>
+            <option>Najran</option>
+            <option>Al-Bahah</option>
+            <option>Al-Jawf</option>
+        </select>
+    </form>
+
+</body>
+</html>

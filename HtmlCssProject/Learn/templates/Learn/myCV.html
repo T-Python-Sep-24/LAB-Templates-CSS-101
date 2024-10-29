@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Osama's Resume</title>
+<style>
+
+    .ArrangeTop 
+    { 
+        display: flex;
+        align-items: center;
+        background-color: rgba(189, 157, 118, 0.515);
+    }
+    .ArrangeName 
+    {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(99, 87, 71);
+    }
+    .ArrangeMyImg 
+    {
+        padding-left: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    body {
+        background-color: rgb(195, 189, 181);
+        font-family: Arial, sans-serif;
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        background: white;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    .column {
+        width: 40%; 
+    }
+    h2 {
+        color: rgb(104, 89, 70);
+    }
+   
+</style>
+</head>
+<body>
+        <div class="ArrangeTop">
+            <img class="ArrangeMyImg" src="{% static 'images/My pic.jpg' %}" alt="AI_Revolution" width="90" height="110">
+            <h1 class="ArrangeName">OSAMA FAHAD BIN KHUNAIZAN</h1>
+        </div>
+
+        <div class="content">
+            <div class="column">
+                <h2>CONTACT ME</h2>
+                <ul>
+                    <li>+966 500426237</li>
+                    <li>osama.binfahad70@gmail.com</li>
+                </ul>
+
+                <h2>PROFILE</h2>
+                <p>I am passionate about web development.</p>
+
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>Java Programming</li>
+                    <li>Python Programming</li>
+                    <li>Object Oriented Programming</li>
+                    <li>
+                        Machine Learning
+                        <ul>
+                            <li>Regression</li>
+                            <li>Classification</li>
+                            <li>Clustering</li>
+                            <li>Anomaly Detection</li>
+                            <li>Neural Networks</li>
+                        </ul>
+                    </li>
+                    <li>Django Frame</li>
+                    <li>Cloud Engineer</li>
+                    <li>HTML/CSS</li>
+                    <li>Git-GitHub</li>
+                    <li>Microsoft Applications</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h2>EDUCATION</h2>
+                <h4>King Saud University</h4>
+                2020<br>
+                College of Computer and Information Sciences<br>
+                Bachelors degree in Computer Science</p>
+                
+                <h2>CERTIFICATIONs</h2>
+                <h4>MACHINE LEARNING SPECIALIZATION</h4>
+                <ul>
+                    <li>Offered in Coursera platform by Stanford University.
+                    <li>About Supervised and Unsupervised Learning.
+                </ul>
+
+                <h4>ACA - ALIBABA CLOUD ASSOCIATE</h4>
+                <ul>
+                    <li>Offered in Tuwaiq Academy.
+                </ul>
+
+                <h2>COURSERs</h2>
+                <h4>Web Development Using Python BOOT CAMP</h4>
+                <ul>
+                    <li>Offered in Tuwaiq Academy.
+                    <li>About Full Stack Development Using Django.
+                </ul>
+
+                <h2>PROJECTs</h2>
+                <h4>Real Estate Price Prediction Project</h4>
+                <ul>
+                    <li>Developed a Python-based application.
+                    <li>Clustering, Anomaly Detection, Classification
+                        and Regression Algorithms.
+                </ul>
+
+                <h4>Saudi Date Fruit Image Classification</h4>
+                <ul>
+                    <li>Convolutional Neural Network Algorithm (CNN).
+                </ul>
+                
+            </div>
+        </div>
+</body>
+</html>

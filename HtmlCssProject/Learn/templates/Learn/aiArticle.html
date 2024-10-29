@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Article</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #d4d4d4;
+        padding: 30px;
+    }
+    div {
+        background: rgb(253, 247, 247);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    article {
+        background: white;
+        border-radius: 5px;
+        box-shadow: -1px 1px 8px rgba(36, 36, 36, 0.2);
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    article:hover {
+        box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+        color: #656565;
+    }
+    h1:hover {
+        color: #91b5dc;
+    }
+    h2 {
+        color: #555;
+        position: relative;
+    }
+    h2:hover {
+        color: #6786a7;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <img src="{% static 'images/AI_Revolution.png' %}" alt="AI_Revolution">
+        <h1>AI Revolution!</h1>
+        <article>
+            <h2>The Beginning of chat GPT</h2>
+            <p>ChatGPT was launched by OpenAI in November 2022,
+                 marking an important step in the AI revolution.
+                  It impressed users with its ability to hold natural conversations,
+                   making it useful for customer service,
+                    content creation, and education.
+                     People reacted positively,
+                      praising its versatility,
+                       but some raised concerns about misuse and ethics.
+                        This mix of excitement and caution
+                         has led to important conversations
+                          about how AI will shape our future
+                           and change the way we communicate and work.</p>
+        </article>
+        
+        <article>
+            <h2>The Rise of Chatbots following ChatGPT Revolution</h2>
+            <p>After ChatGPT was launched,
+                 many new chatbots started to appear,
+                  inspired by its success.
+                   Companies began creating their own AI tools for customer support,
+                    content generation, and personal assistance.
+                     This growth has pushed the AI revolution forward,
+                      making these technologies more accessible.
+                       People have reacted positively,
+                        enjoying the improved features and personalized experiences,
+                         but some still worry about quality and ethical issues.
+                          This ongoing development shows the excitement over AI advancements
+                           while highlighting the need to think carefully about their impact on society.</p>
+        </article>
+
+        <article>
+            <h2>Tesla's 2024 AI Robots. Transforming the Future of Work!</h2>
+            <p>In 2024,
+                 Elon Musk's Tesla unveiled new AI robots,
+                  especially the Tesla Bot,
+                   designed to help with tasks in factories and homes.
+                    These robots aim to boost productivity by working alongside people.
+                     Their impact on the AI revolution is notable,
+                      pushing the limits of what robots can do in everyday life.
+                       People have reacted with both excitement and concern,
+                        many look forward to the benefits of increased efficiency,
+                         while others worry about job loss and ethical issues.
+                          This development shows the promise of AI while highlighting the need for careful use.</p>
+        </article>
+    </div>
+</body>
+</html>
