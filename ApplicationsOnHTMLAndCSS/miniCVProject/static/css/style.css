@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(221, 239, 255);
+}
+
+.additionNav {
+    box-shadow: 0 0 2em 0 #060606;
+}
+
+.heading {
+    animation: float 3.5s ease-in-out infinite;
+    font-size: 2.6em;
+    color: rgb(125, 174, 190);
+}
+
+.overviewCont,
+.projectsCont,
+.skillsCont {
+    padding: 2em;
+    margin-top: 8em;
+}
+
+.overviewCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 15em;
+    transition: all 0.3s;
+}
+
+.projectsCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 1em;
+    transition: all 0.3s;
+}
+
+.skillsCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 1em;
+    transition: all 0.3s;
+}
+
+.overview {
+    font-size: 1.2em;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-0.5em);
+    }
+}
+
+.cardAdditional {
+    width: 18rem;
+    height: 50rem;
+}
+
+.cardText {
+    padding: 1em;
+}

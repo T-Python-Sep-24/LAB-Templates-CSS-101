@@ -5,3 +5,13 @@ from django.http import HttpRequest, HttpResponse
 def miniCVHomeView(request: HttpRequest):
     
     return render(request, "miniCVProject/cvHome.html")
+
+#Display projects page
+def projectsView(request: HttpRequest):
+    
+    return render(request, "miniCVProject/projects.html")
+
+#Display skills page
+def skillsView(request: HttpRequest):
+    
+    return render(request, "miniCVProject/skills.html")
