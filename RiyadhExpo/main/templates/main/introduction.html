@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riyadh Expo 2030</title>
+    <title>RiyadhExpo 2030</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <!-- Custom Styles -->
@@ -36,12 +36,86 @@
             </div>
         </nav>
     </header>
-    
+
+    <div class="overlay text-center">
+        <h1 class="display-4">Welcome to Riyadh Expo 2030</h1>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video width="1000" height="480" autoplay muted loop controls>
+                    <source src="{% static 'videos/RiyadhExpo.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <p class="lead">
+                <strong>About Riyadh Expo 2030</strong> Riyadh Expo 2030 is an ambitious global event that aims to bring together nations, cultures, and ideas under one roof. 
+                The Expo is part of Saudi Vision 2030 and aims to showcase innovations in sustainability, technology, and culture. 
+                With its emphasis on future-forward thinking, Riyadh Expo 2030 will be a hub for collaboration, knowledge-sharing, and inspiration for the world.
+                <a href="{% url 'about' %}" class="text-warning">Read More</a>
+            </p>
+            <h3 class="mt-5">The Era of Change: Together for a Foresighted Tomorrow</h3>
+            <p>
+                The Kingdom of <b>Saudi Arabia achieved victory</b> in the bid to host World Expo 2030 in Riyadh, under the captivating theme, 
+                “The Era of Change: Together for a Foresighted Tomorrow.” <b>Riyadh is poised to craft an unparalleled Expo edition</b> that 
+                will etch an indelible mark on the hearts and minds of its global visitors.
+            </p>
+        </div>
+
+        <div class="container mt-5">
+            <h3>Riyadh Expo 2030 Key Themes</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="{% static 'images/expo_card1.jpeg' %}" class="card-img-top" alt="Expo Card 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sustainability Innovations</h5>
+                            <p class="card-text">Discover groundbreaking solutions in sustainability and green technology that will shape the future of our planet.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="{% static 'images/expo_card2.jpeg' %}" class="card-img-top" alt="Expo Card 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Exchange</h5>
+                            <p class="card-text">Explore the rich cultures of the world through exhibitions and performances, all under one roof in Riyadh.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="{% static 'images/expo_card3.jpeg' %}" class="card-img-top" alt="Expo Card 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Technological Innovations</h5>
+                            <p class="card-text">Experience the latest technological breakthroughs that will redefine the future of industries.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <img src="{% static 'images/expo_card4.jpg' %}" class="card-img-top" alt="Expo Card 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Economic Growth and Development</h5>
+                            <p class="card-text">Discover initiatives that promote economic growth, investment opportunities, and sustainable development, driving progress for future generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
     <footer class="bg-dark text-white text-center py-2">
         <div class="container">
             <small>&copy; 2024 Saudi Tourism. All Rights Reserved.</small>
         </div>
     </footer>
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
