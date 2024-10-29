@@ -19,7 +19,8 @@
     </header>
     <main id="contact-main" class="main-content">
         <h2 class="form-heading">Get in Touch</h2>
-        <form id="contact-form" class="contact-form" action="#" method="post">
+        <form id="contact-form" class="contact-form" action="{% url 'myapp:contact' %}" method="post">
+            {% csrf_token %} 
             <label for="name" class="form-label">Name:</label>
             <input type="text" id="name" name="name" class="form-input" required>
             <br>
