@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Photography Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
-<body>
+<body class="album">
 <nav>
     <a href="{% url 'html_css_app:main_view' %}">Main <img src=""/> </a>
     <a href="{% url 'html_css_app:html_view' %}">Photography Portfolio</a>
@@ -14,41 +14,45 @@
     <a href="{% url 'html_css_app:ai_article_view' %}">AI Article</a>
     <a href="{% url 'html_css_app:cv_view' %}">My CV</a>
 </nav>
-<hr>
-<div>
-    <h1>Photography Portfolio</h1>
-    <h4>Photography is my passion, I love capturing the beauty of the world, revisiting old memories and showing others my perspective of things and the beautiful details of various scenes</h4>
-    <p>Nature is filled with amazing details for whom who appreciate it and think deeply about what is around them</p>
-    <p>Human being also build nice architectures, and formed things amuse the eyes </p>
-</div>
-{% for photo in photos %}
 
-<div class="photo-item">
-    <img src="{% static photo.photoName %}" width="230" height="350" alt="img-{{ photo.id }}">
-    <br>
-    <p id="likeCount-{{ photo.id }}" data-likes=" {{ photo.likes }}" data-id = "{{photo.id}} ">Likes: {{ photo.likes }}</p>
-    <input class="like-btn" type="button" value="Like ❤ " onclick="updateLikes({{ photo.id }})">
-    {% for cap in photo.captions %}
-    <p>{{ cap }}</p>
-    {% endfor %}
-    <p>Comments:</p>
-    <div id="commentsOf-{{ photo.id }}">
 
+<div class="album responsive-container-block">
+    <div class="intro">
+        <h1>Photography Portfolio</h1>
+        <h4>Photography is my passion. I love capturing the beauty of the world, revisiting old memories, and showing others my perspective of things and the beautiful details of various scenes.</h4>
+        <h4>- Nature is filled with amazing details for those who appreciate it and think deeply about what is around them.</h4>
+        <h4>- Human beings also built nice architectures and formed things that amuse the eyes.</h4>
     </div>
-    <label>
-        <input id="commentImg-{{ photo.id }}" type="text" placeholder="Leave Your Comment">
-    </label>
-    <input type="button" value="Add Comment" onclick="addComment({{ photo.id }})">
+
+    <div class="responsive-container-block">
+        {% for photo in photos %}
+        <div class="responsive-container-block img-cont">
+            <img class="img" src="{% static photo.photoName %}" width="230" height="350" alt="img-{{ photo.id }}">
+            <br>
+            <p id="likeCount-{{ photo.id }}" data-likes="{{ photo.likes }}" data-id="{{ photo.id }}">Likes: {{ photo.likes }}</p>
+            <input class="like-btn" type="button" value="Like ❤ " onclick="updateLikes({{ photo.id }})">
+            {% for cap in photo.captions %}
+            <div>
+                <p>{{ cap }}</p>
+            </div>
+            {% endfor %}
+
+            <div class="decs" id="commentsOf-{{ photo.id }}">
+                <p>Comments:</p>
+            </div>
+            <label>
+                <input id="commentImg-{{ photo.id }}" type="text" placeholder="Leave Your Comment">
+            </label>
+            <input class="add-comment-btn" type="button" value="Add Comment" onclick="addComment({{ photo.id }})">
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
-{% endfor %}
+<div class="responsive-container-block" id="gallery"></div>
 
-
-<div class="photo-item gallery" id="gallery">
-
-</div>
-<div class="upload-form">
-    <h2>Upload a Photo</h2>
+<div class="upload-form responsive-container-block">
+    <h2 id="i53es">Upload a Photo</h2>
     <form id="photoForm">
         <label for="photo">Choose a photo:</label>
         <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
@@ -63,7 +67,6 @@
 <script>
     // function to update likes of the images
     function updateLikes(photoId) {
-        console.log(`Updating likes for ID: ${photoId}`);
         const likeCountElement = document.getElementById(`likeCount-${photoId}`);
         let currentLikes = parseInt(likeCountElement.getAttribute("data-likes")) || 0;
 
@@ -75,17 +78,14 @@
 
     // function to add comments to the images
     function addComment(commImgId) {
-        console.log(`Adding comment for ID: ${commImgId}`);
         const comments_space = document.getElementById(`commentsOf-${commImgId}`);
         const commentInput = document.getElementById(`commentImg-${commImgId}`);
-
 
         if (commentInput && comments_space) {
             const commentText = commentInput.value;
             const theComment = document.createElement("p");
             theComment.innerText = commentText;
             comments_space.appendChild(theComment);
-
 
             commentInput.value = "";
         } else {
@@ -97,7 +97,6 @@
     document.getElementById("addBtn").addEventListener("click", addImg);
     let new_imgs_id = 10; // Initialize new images ID starting from 10
     function addImg(event) {
-        // Increment ID for the next image
         new_imgs_id++;
         event.preventDefault();
 
@@ -108,21 +107,18 @@
         if (photoFile && commentText) {
             const reader = new FileReader();
             reader.onload = function(event) {
-                // Create elements for the new photo and comment
                 const photoItem = document.createElement("div");
-                photoItem.classList.add("photo-item");
+                photoItem.classList.add("responsive-container-block", "img-cont");
 
                 const img = document.createElement("img");
                 img.src = event.target.result;
-
-                console.log(`new imgs id = ${new_imgs_id}`)
+                img.classList.add("img");
 
                 const likes = document.createElement("p");
                 likes.id = `likeCount-${new_imgs_id}`;
                 likes.setAttribute("data-likes", new_imgs_likes_counter);
                 likes.innerText = `Likes: ${new_imgs_likes_counter}`;
-                likes.setAttribute("data-id", new_imgs_id)
-                console.log(`data-likes attr ${likes.getAttribute("data-likes")}`)
+                likes.setAttribute("data-id", new_imgs_id);
 
                 const likesBtn = document.createElement("input");
                 likesBtn.type = "button";
@@ -137,6 +133,7 @@
                 const comments_div = document.createElement("div");
                 comments_div.id = `commentsOf-${new_imgs_id}`;
                 comments_div.setAttribute("data-id", new_imgs_id);
+
                 const label = document.createElement("label");
                 label.innerHTML = `Comment: <input id="commentImg-${new_imgs_id}" type="text" placeholder="Leave Your Comment">`;
 
@@ -146,9 +143,9 @@
                 addButton.onclick = function() {
                     addComment(comments_div.getAttribute("data-id"));
                 };
-
-                // Append elements to the photo item container
+                br = document.createElement("br");
                 photoItem.appendChild(img);
+                photoItem.appendChild(br);
                 photoItem.appendChild(likes);
                 photoItem.appendChild(likesBtn);
                 photoItem.appendChild(comment);
@@ -156,19 +153,13 @@
                 photoItem.appendChild(label);
                 photoItem.appendChild(addButton);
 
-                // Append the new photo item to the gallery
                 document.getElementById("gallery").appendChild(photoItem);
-
-                // Clear the form
                 document.getElementById("photoForm").reset();
-
-
             };
             reader.readAsDataURL(photoFile);
         }
     }
 </script>
-
 
 </body>
 </html>

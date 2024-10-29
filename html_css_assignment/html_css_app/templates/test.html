@@ -37,42 +37,7 @@
     </form>
 </div>
 
-<script>
-    document.getElementById("addBtn").addEventListener("click", addImg);
-    function addImg(){
-        event.preventDefault();
-
-        // Get the file and comment
-        const photoFile = document.getElementById("photo").files[0];
-        const commentText = document.getElementById("comment").value;
-
-        if (photoFile && commentText) {
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                // Create elements for the new photo and comment
-                const photoItem = document.createElement("div");
-                photoItem.classList.add("photo-item");
-
-                const img = document.createElement("img");
-                img.src = event.target.result; // Set image source to file content
-
-                const comment = document.createElement("p");
-                comment.textContent = commentText;
-
-                // Append photo and comment to the gallery
-                photoItem.appendChild(img);
-                photoItem.appendChild(comment);
-                document.getElementById("gallery").appendChild(photoItem);
-
-                // Clear the form
-                document.getElementById("photoForm").reset();
-            };
-            reader.readAsDataURL(photoFile);
-        }
-
-    }
-
-</script>
+s
 
 </body>
 </html>

@@ -93,7 +93,6 @@
     <script>
         // function to update likes of the images
         function updateLikes(photoId) {
-            console.log(`Updating likes for ID: ${photoId}`);
             const likeCountElement = document.getElementById(`likeCount-${photoId}`);
             let currentLikes = parseInt(likeCountElement.getAttribute("data-likes")) || 0;
 
@@ -105,7 +104,6 @@
 
         // function to add comments to the images
         function addComment(commImgId) {
-            console.log(`Adding comment for ID: ${commImgId}`);
             const comments_space = document.getElementById(`commentsOf-${commImgId}`);
             const commentInput = document.getElementById(`commentImg-${commImgId}`);
 
@@ -145,14 +143,11 @@
                     const img = document.createElement("img");
                     img.src = event.target.result;
 
-                    console.log(`new imgs id = ${new_imgs_id}`)
-
                     const likes = document.createElement("p");
                     likes.id = `likeCount-${new_imgs_id}`;
                     likes.setAttribute("data-likes", new_imgs_likes_counter);
                     likes.innerText = `Likes: ${new_imgs_likes_counter}`;
                     likes.setAttribute("data-id", new_imgs_id)
-                    console.log(`data-likes attr ${likes.getAttribute("data-likes")}`)
 
                     const likesBtn = document.createElement("input");
                     likesBtn.type = "button";
