@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafting Stunning Websites with TUWAIQ!</title>
+    <link rel="stylesheet" href="{% static 'css/homePage_style.css' %}"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Crafting Stunning Websites with TUWAIQ!</h1>
+    </header>
+
+    <main>
+        <div class="welcome-message">
+            <h2>Let's Dive Into Our Webpages!</h2>
+        </div>
+
+        <div class="button-container">
+            <a class="button" href="{% url 'Reema_app:Personal' %}">Personal Information</a>
+            <a class="button" href="{% url 'Reema_app:Article' %}">AI Article</a>
+            <a class="button" href="{% url 'Reema_app:Careers' %}">CV</a>
+            <a class="button" href="{% url 'Reema_app:Contact_us' %}">Contact Us</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TUWAIQ. All rights reserved.</p>
+    </footer>
+</body>
+</html>
