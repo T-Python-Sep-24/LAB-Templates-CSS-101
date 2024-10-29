@@ -14,6 +14,7 @@ html, body {
 /* Content should push the footer to the bottom */
 body > .content {
     flex: 1;
+    margin-bottom: -1px; /* Ensure no extra spacing is below the content */
 }
 
 /* Navbar Gradient Styling */
@@ -52,8 +53,188 @@ body > .content {
     color: white;
 }
 
-/* Footer Styling */
+/* General Spacing for Article */
+.article-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Make Images Look Better */
+.img-fluid {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Add Shadow to Article */
+article {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Shadow to Images */
+.img-fluid {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Padding for Headers */
+article h3 {
+    color: #343a40;
+    font-weight: bold;
+}
+/* Large screens (desktops) */
+@media (min-width: 992px) {
+    .article-text {
+        font-size: 1.2rem;
+    }
+    .navbar {
+        padding: 20px 40px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .article-text {
+        font-size: 1.1rem;
+    }
+    .content {
+        padding: 20px;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767.98px) {
+    .article-text {
+        font-size: 1rem;
+        text-align: justify; /* Makes text easier to read on smaller screens */
+    }
+    .navbar-brand img {
+        height: 30px; /* Adjust logo size for small screens */
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+/* Button with Transition */
+.btn-custom {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    transition-property: background-color, transform; /* Apply transition to color and transform */
+    transition-duration: 0.3s; /* Transition duration is 0.3 seconds */
+}
+
+.btn-custom:hover {
+    background-color: #f06724; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+/* Image with Transition */
+.img-fluid {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.1); /* Zoom the image slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+}
+/* Keyframe Animation for Heading */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Apply the Animation to Headings */
+h2, h3 {
+    animation-name: fadeInUp; /* Reference the keyframe name */
+    animation-duration: 1s; /* Animation lasts 1 second */
+    animation-timing-function: ease-in-out; /* Easing for smooth movement */
+    animation-delay: 0.2s; /* Start the animation after 0.2s */
+    animation-fill-mode: both; /* Ensure element stays in its final position */
+}
+
+/* :hover for Links */
+.nav-link:hover {
+    color: #f06724; /* Change color when hovered */
+    text-decoration: underline; /* Add underline to indicate link hover */
+}
+
+/* :nth-child to Style Every Second Paragraph Differently */
+.article-text:nth-child(2n) {
+    background-color: #f9f9f9; /* Light grey background for every second paragraph */
+    padding: 10px; /* Add padding for readability */
+    border-radius: 5px;
+}
+
+/* ::before and ::after for Headings */
+h3::before {
+    content: '⭐'; /* Add a star icon before each h3 heading */
+    color: #f06724;
+    margin-right: 5px;
+}
+
+h3::after {
+    content: ' ✨'; /* Add sparkle after each h3 heading */
+    color: #f06724;
+    margin-left: 5px;
+}
+
+/* Button with :hover */
+.btn-custom {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #f06724;
+    transform: scale(1.05);
+}
+
+/* Animation Example for Buttons */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Add Animation on Hover */
+.btn-custom:hover {
+    animation: bounce 1s; /* Add bounce effect when the button is hovered over */
+}
+
+/* Pseudo-elements for Blockquote */
+blockquote::before {
+    content: open-quote; /* Add opening quote */
+    font-size: 2rem;
+    color: #f06724;
+    margin-right: 5px;
+}
+
+blockquote::after {
+    content: close-quote; /* Add closing quote */
+    font-size: 2rem;
+    color: #f06724;
+    margin-left: 5px;
+}
+
+
 footer {
-    flex-shrink: 1;
+    flex-shrink: 0;  /* Ensure footer stays at the bottom */
     background-color: #343a40;
+    padding: 10px 0; /* Adjust padding to avoid extra spacing */
 }
