@@ -21,14 +21,14 @@ h2 {
     margin-top: 20px;
 }
 
-/* Paragraph and Link Styling */
 p {
+    color: #0022ff;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
 a {
-    color: #0056b3;
+    color: #ff0000;
     text-decoration: none;
 }
 

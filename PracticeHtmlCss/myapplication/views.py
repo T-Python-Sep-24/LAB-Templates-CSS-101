@@ -4,16 +4,16 @@ from django.http import HttpRequest, HttpResponse
 
 
 def html_intro_view(request:HttpRequest):
-    return render(request,"introduction.html")
+    return render(request,"myapplication/introduction.html")
 
 def css_intro_view(request:HttpRequest):
-    return render(request, 'introduction_css.html')
+    return render(request, 'myapplication/introduction_css.html')
 
 def article(request:HttpRequest):
-    return render(request, "article.html")
+    return render(request, "myapplication/article.html")
 
 def cv(request:HttpRequest):
-    return render(request, "cv.html")
+    return render(request, "myapplication/cv.html")
 
 
 
