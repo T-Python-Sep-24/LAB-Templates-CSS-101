@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<div class="content-container">
+    <h1>My Graduation Project</h1>
+    <section>
+        <h2>Fire Fighting Robot</h2>
+        <img src="{% static 'main/images/fire_fighting_robot.jpg' %}" alt="Fire Fighting Robot" style="max-width: 100%; height: auto;">
+        <p>
+            My graduation project is a Fire Fighting Robot designed to autonomously detect and extinguish fires.
+            This robot utilizes advanced sensors and a water spray mechanism to effectively combat small fires
+            in indoor environments, enhancing safety and emergency response capabilities.
+        </p>
+    </section>
+</div>
+{% endblock %}

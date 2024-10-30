@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use Flexbox for body */
+    flex-direction: column; /* Stack children vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f5f5f5; /* Background color */
+}
+
+main {
+    display: flex; /* Use Flexbox for main */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-grow: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center text */
+}
+
+.content-container {
+    max-width: 800px; /* Limit width for better readability */
+    width: 100%; /* Responsive width */
+}
+
+h1, h2 {
+    margin: 20px 0; /* Space above and below headings */
+}
+
+ul {
+    list-style-position: inside; /* Bullets inside list */
+    padding: 0; /* Remove default padding */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}

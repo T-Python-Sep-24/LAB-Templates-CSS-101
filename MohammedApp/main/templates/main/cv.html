@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% block title %}CV{% endblock %}
+{% block content %}
+<h1>CV</h1>
+
+<h2>Personal Information</h2>
+<p><strong>Name:</strong> Mohammed Alkathiri</p>
+<p><strong>Email:</strong> sirexplq@gmail.com</p>
+<p><strong>Phone:</strong> +966553011972</p>
+
+<h2>Education</h2>
+<ul>
+    <li><strong>Degree</strong>, Computer Engineer ,bachelor Degree ,2024</li>
+
+</ul>
+
+<h2>Skills</h2>
+<ul>
+    <li>Programming</li>
+    <li>Cyber security</li>
+</ul>
+
+<h2>Contact</h2>
+<p>If you would like to get in touch, please visit the <a href="{% url 'contact' %}">Contact</a> page.</p>
+{% endblock %}
