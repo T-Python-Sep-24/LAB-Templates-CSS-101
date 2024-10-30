@@ -7,7 +7,19 @@
     <title>HTML INTRODUCTION</title>
 </head>
 <body style="background-image: url(/static/images/html.webp); background-size: cover; background-repeat: no-repeat;">
-    
+    <header>
+        <nav>
+        
+            <ul>
+                <li><a href="{% url 'training:home_view' %}">home</a></li>
+                <li><a href="{% url 'training:html_view' %}">HTML Introdcution</a></li>
+                <li><a href="{% url 'training:css_view' %}">css Introdcution</a></li>
+                <li><a href="{% url 'training:article_view' %}">article ai</a></li>
+                <li><a href="{% url 'training:cv_view' %}">CV</a></li>
+                
+            </ul>
+        </nav>
+    </header>
     <h1><i>Hello html</i> </h1>
     <p>This is not the first time using Html but the proplem is that i didn't practice it so<b>I forgot everything!</b> </p>
     <p style="display: flex; align-items: center;">   

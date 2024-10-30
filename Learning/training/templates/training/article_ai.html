@@ -1,11 +1,103 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/styleai.css'%}">
+    <title>Article AI</title>
 </head>
 <body>
-    <h1>Hello ai</h1>
+    <header>
+      <nav>
+        
+        <ul>
+            <li><a href="{% url 'training:home_view' %}">home</a></li>
+            <li><a href="{% url 'training:html_view' %}">HTML Introdcution</a></li>
+            <li><a href="{% url 'training:css_view' %}">css Introdcution</a></li>
+            <li><a href="{% url 'training:article_view' %}">article ai</a></li>
+            <li><a href="{% url 'training:cv_view' %}">CV</a></li>
+            
+        </ul>
+    </nav>
+        <h1>Exploring Artificial Intelligence</h1>
+    </header>
+    
+      <!-- Navigation Bar -->
+    <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#future">Future</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+      <!-- Main Content -->
+     <div class="container">
+        <section>
+          <h1>The Rise of Artificial Intelligence</h1>
+          <p>Explore the rapid growth and impact of AI in today`s world.</p>
+    
+          <article id="introduction">
+            <h2>Introduction to Artificial Intelligence</h2>
+            <p>
+                Artificial Intelligence (AI) is a revolutionary field in computer science, 
+                centered around the goal of creating machines and software that mimic human intelligence.
+                From understanding natural language to making complex decisions and recognizing patterns,
+                AI aims to enable machines to perform tasks that, until recently, were thought to be exclusively human capabilities.
+                AI has moved beyond the realm of science fiction to become a powerful driver of modern technology, shaping industries,
+                impacting everyday life, and raising important ethical questions.
+            </p>
+            
+            
+    
+            <h2 id="applications">Applications of AI</h2>
+            <p>
+                AI is present in a variety of industries, including healthcare,
+                finance, automotive, and entertainment. It helps diagnose diseases,
+                provides personalized financial advice, powers self-driving cars,
+                and recommends content on streaming platforms.
+                One of the most impactful applications of AI is in healthcare,
+                where it aids in diagnosing diseases, predicting patient outcomes,
+                and personalizing treatment plans. AI algorithms can analyze medical images—such as X-rays,
+                MRIs, and CT scans—to detect abnormalities like tumors or fractures, often with high accuracy.
+                Additionally, AI-powered tools support healthcare professionals by identifying patterns and making diagnostic processes more efficient,
+                improving both the speed and accuracy of patient care. This application of AI not only assists in early disease detection but also contributes to more targeted and effective treatment strategies,
+                enhancing overall patient outcomes.
+            </p>
+    
+            <h2 id="impact">Impact on Jobs and Society</h2>
+            <p>
+                AIs growing presence across industries is transforming the workforce and society in significant ways. In the job market, AI-powered automation is reshaping roles by performing repetitive or data-intensive tasks, especially in manufacturing, customer service, and logistics. This change can increase productivity and reduce human error but also raises concerns about job displacement, as certain tasks once performed by humans are now automated.
+                While automation might replace some jobs, AI also creates new roles in fields like AI development, data science, and machine maintenance. However, this shift requires workers to gain new skills, pushing organizations and governments to prioritize reskilling and upskilling programs.
+                In society, AI influences areas such as privacy, ethics, and equality. As algorithms process large amounts of personal data, concerns over privacy and data security grow, prompting the need for stronger regulations to protect individuals. Additionally, the potential for algorithmic bias impacts fairness in areas like hiring, law enforcement, and lending.
+                As AI technology advances, addressing these societal and ethical challenges is crucial to ensuring AI is used responsibly and benefits everyone.
+            </p>
+            <h2 id="future">The Future of AI</h2>
+            <p>
+                The future of AI promises transformative advancements across industries, with efforts toward creating General AI capable of human-like understanding across domains.
+                In healthcare, AI could revolutionize early disease detection, personalized medicine, and surgical assistance, while in education,
+                it may provide adaptive, personalized learning experiences. Environmental applications might include climate monitoring and resource optimization.
+                As AI grows, ethical concerns—such as privacy, bias, and job displacement—will require stronger regulations and transparency to ensure these technologies benefit society responsibly.
+                The future of AI holds both incredible potential and complex challenges that could reshape daily life and global problem-solving.
+            </p>
+          </article>
+          <aside>
+            <h2>Did You Know?</h2>
+            <p>AI is expected to create 58 million new jobs by 2025.</p>
+          </aside>
+        </section>
+     </div>
+    </main>
+      <footer>
+        <p>&copy; 2024 Ali ALMaghamsi. All rights reserved.</p>
+        <div class="social-media">
+          <a href="https://github.com/AliALMaghamsi" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/ali-al-maghamsi-729593313/" target="_blank">LinkedIn</a>
+        </div>
+      </footer>
+    
 </body>
 </html>
