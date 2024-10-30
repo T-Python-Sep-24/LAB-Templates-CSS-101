@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cv-container {
+            display: flex;
+            max-width: 900px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #2e3b4e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2em;
+            color: #ecf0f1;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .contact,
+        .sidebar .skills,
+        .sidebar .languages,
+        .sidebar .courses {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 5px 0;
+            color: #bdc3c7;
+        }
+
+        .sidebar ul li::before {
+            content: "• ";
+            color: #1abc9c;
+        }
+
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .main-content h1 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .main-content h3 {
+            color: #1abc9c;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .main-content section {
+            margin-bottom: 20px;
+        }
+
+        .main-content h2 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+
+        .main-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-top: 10px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+    
+        <aside class="sidebar">
+            <div class="profile-pic">
+                <img src="/static/images/3135715.png">
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>Email: meshal.h.alanazi@gmail.com</p><br>
+                <p>Phone: 0559091003</p>
+                
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Microsoft office</li>
+                    <li>power bi</li>
+                    <li>Excel</li>
+                </ul>
+            </div>
+            <div class="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li> Arabic</li>
+                    <li> English</li>
+                </ul>
+            </div>
+            <div class="courses">
+                <h2>COURSES</h2>
+                <ul>
+                    <li>Introduction to Cybersecurity</li>
+                    <li> Python Essentials</li>
+                    <li> IoT</li>
+                </ul>
+            </div>
+        </aside>
+        
+       
+        <main class="main-content">
+            <h1>Meshal Al-anazi</h1><br><br>
+           
+
+            <section class="profile">
+                <h2>EDUCATION</h2>
+                <h4> Bachelor's degree | Computer Science</h4>
+                <p> University of Tabuk</p>
+            </section>
+
+            <section class="experience">
+                <h2>Professional Experience</h2>
+                <h4> UNIVERSITY PROJECT</h4>
+                <p>An Intelligent Search and Rescue System to Detect Lost Humans in Desert 
+                    Environments Collaborated as part of a five-member team to develop a 
+                    real-time machine learning system aimed at locating lost individuals in desert 
+                    landscapes using drone-captured imagery. The project utilized YOLOv3 to 
+                    accurately detect human bodies in aerial images, providing a scalable solution 
+                    for search and rescue operations. Upon detection, the system sends an 
+                    immediate alert to the ground station, facilitating prompt rescue efforts. The 
+                    project was implemented using Python, demonstrating proficiency in deep 
+                    learning and real-time image processing.t</p>
+                
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

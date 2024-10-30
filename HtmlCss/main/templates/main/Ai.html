@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Revolution</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #ffffff;
+            line-height: 1.6;
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            color: #ff8c00;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0.3em;
+            color: #ff8c00;
+        }
+
+        header p {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        nav {
+            background-color: #000;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: #ff8c00;
+            border-radius: 4px;
+            transform: scale(1.1);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+
+        main:hover {
+            box-shadow: 0 0 30px rgba(255, 165, 0, 0.5);
+        }
+
+        section h2 {
+            color: #ff8c00;
+            font-size: 2em;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ff8c00;
+            margin-top: 5px;
+        }
+
+        section img, section video {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section img:hover, section video:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+        }
+
+        aside {
+            background: rgba(255, 165, 0, 0.1);
+            padding: 15px;
+            border-left: 4px solid #ffffff;
+            margin: 20px 0;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        aside:hover {
+            background: rgba(255, 165, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        footer {
+            background-color: #000; 
+            color: #ff8c00; 
+            text-align: center;
+            padding: 15px;
+            font-size: 1em; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        footer:hover {
+            background-color: #ff8c00; 
+            color: #fff; 
+            transform: scale(1.01); 
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The AI Revolution</h1>
+        <p>Exploring the Future of Artificial Intelligence</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#impacts">Impacts of AI</a></li>
+            <li><a href="#future">Future of AI</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction to AI</h2>
+            <p>Artificial Intelligence (AI) represents a transformative technological advancement that not only enhances the efficiency of various industries but also reshapes how we interact with the world around us, driving innovation in fields such as healthcare, where it aids in diagnostics and personalized medicine, to finance, where it optimizes trading strategies and risk assessments, ultimately aiming to create a future where intelligent systems assist in making our lives easier and more productive.</p>
+            <img src="/static/images/AI.jpg" alt="AI Revolution Image"/>
+        </section>
+
+        <section id="impacts">
+            <h2>Impacts of AI on Society</h2>
+            <p>AI is transforming various fields such as healthcare, finance, and more. It enables faster data processing and predictive analytics, improving decision-making.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_eaJd3muf2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <aside>
+            <h3>Did You Know?</h3>
+            <p>AI can analyze massive datasets quickly, making it essential for data analysis. It's used in applications ranging from personalized recommendations to advanced robotics.</p>
+        </aside>
+
+        <section id="future">
+            <h2>The Future of AI</h2>
+            <p>Looking ahead, AI is expected to be an integral part of everyday life, with new applications constantly emerging in fields like education, transportation, and entertainment.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The AI revolution is shaping the future of technology, and its influence will only grow. Embracing AI advancements will be crucial for businesses and society as a whole.</p>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 The AI Revolution - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
