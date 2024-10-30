@@ -11,13 +11,37 @@ html {
 body {
     max-width: 100%;
     margin: 0 auto;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    background-image: linear-gradient(to top, #ffffff , #DEEFF5);
     padding: 0 10px;
 }
+
+.menu {
+    margin: 0 auto;
+    padding: 25px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+.menu > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 5px 20px;
+    text-align: center;
+}
+  
 
 h1 {
     text-align: center;
     margin: 0;
+    margin-bottom: 20px;
     padding: 20px 0;
     color: #00539f;
     text-shadow: 2px 2px 1px black;
@@ -95,6 +119,11 @@ table, th, tr, td {
     body {
         max-width: 80%;
     }
+
+    .menu {
+        flex-direction: row;
+    }
+
     /* change into two cloumns using flex */
     .container {
         flex-direction: row;

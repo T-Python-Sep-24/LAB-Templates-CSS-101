@@ -17,3 +17,7 @@ def article_ai_view(request: HttpRequest):
 def career_cv_view(request: HttpRequest):
 
     return render(request, "main/career-cv.html")
+    
+def home_view(request: HttpRequest):
+
+    return render(request, "main/home.html")
