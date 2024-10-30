@@ -1,0 +1,56 @@
+.full-screen {
+    height: 100vh;
+    width: 100%;
+    background-color: lightblue; 
+}
+#introImage{
+    position: relative;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:80px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(22, 25, 32, 0.654);
+    margin-top: 5px;
+    height: 50vh;
+}
+.card-header{
+    padding: 0%;
+    background-color: blueviolet;
+}
+
+.card-body{
+    background-color: #191834;
+    height: 40vh;
+    color: aliceblue;
+}
+
+.card-header img{    
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+video{
+    width: 100%;          
+    height: auto;        
+    max-width: 500px;
+
+   }
+
+.navbar{
+    background-color: #13122a;
+   }
+
+.footer{
+    width: 50%;
+    margin: 0 auto; 
+}

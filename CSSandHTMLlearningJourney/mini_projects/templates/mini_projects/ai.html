@@ -1,0 +1,114 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Article</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{%static 'css/ai.css'%}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2e6ab3d91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="full-screen">
+        <img id="introImage" class="full-screen img-fluid" src="{%static 'images/glass_code.jpg'%}">
+        <a class="top-left text-white h3" href="" style="text-decoration: none;"><i class="fa-solid fa-circle-nodes"></i> AI</a>
+        <div class="centered h3 text-white text-center container-fluid">The Impact of Artificial Intelligence on Modern Society</div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">AI's Applications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">AI's Impact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">AI in Action</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div id="section1" class="container-fluid bg-dark text-white full-screen" style="padding:100px 20px;">
+        <h1>Applications of AI</h1>
+        <p>AI technologies are now prevalent in numerous fields, making tasks easier and more efficient. Some notable applications include:</p>
+        <br/>
+        <ul>
+            <li>Healthcare: AI algorithms are used for diagnostic purposes, predicting diseases, and personalizing treatment plans. Machine learning models analyze medical data to assist doctors in making informed decisions.
+            </li>
+            <br/>
+            <li>Finance: In the financial sector, AI enhances risk assessment and fraud detection. Automated trading systems utilize algorithms to make real-time investment decisions based on market data.
+            </li>
+            <br/>
+            <li>Transportation: AI powers autonomous vehicles, optimizing routes, and improving safety through advanced sensor technologies and data analytics.
+            </li>
+            <br/>
+        </ul>
+        <p>The integration of AI into these sectors demonstrates its versatility and potential to improve efficiency and accuracy.
+        </p>
+
+      </div>
+      
+      <div id="section2" class="container-fluid full-screen bg-dark text-white" style="padding:100px 20px;">
+        <h1>Visualizing AI's Impact
+        </h1>
+        <div class="row">
+            <div class="col"><div class="card">
+                <div class="card-header"><img class="rounded-top" src="{%static 'images/ai_flower.jpg'%}"/></div>
+                <div class="card-body">AI has evolved significantly over the years, driven by advances in computing power and data availability. Early AI systems relied on rule-based programming, while modern approaches utilize deep learning and neural networks.</div>
+              </div></div>
+            <div class="col"><div class="card">
+                <div class="card-header"><img class="rounded-top" src="{%static 'images/recommend.jpg'%}"/></div>
+                <div class="card-body">From voice-activated assistants like Siri and Alexa to recommendation systems on streaming platforms, AI has become an integral part of our daily routines. These technologies not only enhance convenience but also personalize user experiences.</div>
+              
+              </div></div>
+            <div class="col"><div class="card">
+                <div class="card-header"><img class="rounded-top" src="{%static 'images/ethical.jpg'%}"/></div>
+                <div class="card-body">Despite its benefits, AI also raises ethical concerns, including bias in algorithms, data privacy issues, and the potential for job displacement. Addressing these challenges is crucial for responsible AI development.</div>
+          
+              </div></div>
+          </div>
+        
+      </div>
+      
+      <div id="section3" class="container-fluid bg-dark text-white full-screen " style="padding:100px 20px;">
+        <div class="col">
+            <h1>AI in Action</h1>
+            <p>As we look to the future, AI will continue to evolve, promising even more 
+                revolutionary changes. Emerging technologies like quantum 
+                computing could enhance AI capabilities, leading to breakthroughs
+                in various fields. Collaboration between researchers, policymakers, 
+                and the public is essential to navigate the ethical landscape
+                of AI development and harness its full potential for societal benefit.</p>
+        </div>
+        
+            <div class="col text-center ">
+              <iframe width="420" height="315"
+              src="https://www.youtube.com/embed/1s8xOD_G43g">
+              </iframe>
+            </div>
+      </div>
+
+      <div class="mt-5 p-4 bg-dark text-white text-center">
+        <div class="footer mb-1">
+            <label for="customRange" class="form-label">Share Your Assessment For Article</label>
+            <input type="range" class="form-range" id="customRange">
+            
+            <div class="row">
+                <div class="col text-start">Bad</div>
+                <div class="col text-center">Good</div>
+                <div class="col text-end">Perfect</div>
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <input type="submit" class="btn btn-light" value="Submit">
+        </div>
+    </div>
+      
+</body>
+</html>

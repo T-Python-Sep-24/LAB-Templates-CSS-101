@@ -1,0 +1,118 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{%static 'css/cv.css'%}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2e6ab3d91.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <title>My CV</title>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="{%static 'videos/background.mp4'%}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="d-flex align-items-center">
+        <a id='logo' class="m-3" href="#"><i class="fa-brands fa-think-peaks fa-2xl"></i></a>
+        <ul class="nav justify-content-end mb-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% static 'myCV.pdf' %}" download="">Download My CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mini_projects:cv_view' %}">Home</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Hi Again, Take a Look<br/> On My Experience Work. </h1>
+        <p  style="border-bottom: 1px solid black; padding-bottom:23vh ;"></p>
+
+        <table>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: left;">
+                    
+                    <h3>Quwa Altaqah Alshamsiah Trading Institution, Medina, Saudi Arabia
+                        Data analyst, 07/2022 – 7/2024</h3>
+                    
+                      <ul>
+                        <li>Collecting and analyzing administrative requirements for designing and modeling.</li>
+                        <li>Gathering, processing, and analyzing data to compile and deliver comprehensive reports.</li>
+                        <li>Maintaining CRUD operations.</li>
+                        <li>Visualize data to provide valuable insight and support decision-making.</li>
+                      </ul>
+                </td>
+                <td style=" border-bottom: 1px solid black; text-align: left;">
+                    <div >
+                        <img class="rounded bg-dark" style="text-align: center; width: 80vh;height: 50vh;" src="{%static 'images/solar.jpg'%}"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: left;">
+                    
+                    <h3>Qeyamuna Charitable Society for Community Service, Medina , Saudi Arabia
+                        Project Supervisor, 07/2023 - 08/2023 </h3>
+                    
+                      <ul>
+                        <li>Arrange meetings with all relevant stakeholders, capturing detailed minutes of meetings.</li>
+                        <li>Develop a detailed project plan and provide reports at regular intervals to track progress.</li>
+                        <li>Coordinate and allocate internal resources and third parties/vendors for the project execution.</li>
+                        <li>Create and maintain comprehensive project documentation.</li>
+                        <li>Client and stakeholder relationship management.</li>
+                        <li>Reporting to the upper management and submitting historical project information to the project management office in the closing phase.</li>
+                      </ul>
+                </td>
+                <td style=" border-bottom: 1px solid black; text-align: left;">
+                    <div >
+                        <img class="rounded bg-dark" style="text-align: center; width: 80vh;height: 50vh;" src="{%static 'images/qyamuna.png'%}"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: left;">
+                    
+                    <h3>Qeyamuna Charitable Society for Community Service, Medina , Saudi Arabia
+                        Intern, 07/2022 - 08/2022 </h3>
+                    
+                      <ul>
+                        <li>Set up and configure the "Rafed" information system to toiles "Rafed" for work efficiency.</li>
+                        <li>The "Rafed" information system workshops provide training for employees.</li>
+                        <li>Managing and maintaining the content management system of “Rafed”.</li>
+                        <li>Administrative tasks and relationship management.</li>
+                        <li>Submitting and reconciling expense reports.</li>
+                      </ul>
+                </td>
+                <td style=" border-bottom: 1px solid black; text-align: left;">
+                    <div >
+                        <img class="rounded bg-dark" style="text-align: center; width: 80vh;height: 50vh;" src="{%static 'images/qyamuna.png'%}"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="mt-5 p-4 text-black text-center">
+        <p style="border-bottom: 1px solid black;">Contact with me</p>
+        <div class="row ">
+                <span class="col"><i class="fa-solid fa-phone col"></i> +966538562411 </span>
+                <span class="col"> <i class="fa-solid fa-envelope col"></i> <a href="mailto:aomsh1420@gmail.com" target="_blank"> Email me </a> </span>
+                <span class="col"><i class="fa-solid fa-location-dot col"></i> Riyadh, Medina </span>               
+                <span class="col"><i class="fa-brands fa-github col"></i><a href="https://github.com/Aomsh2000" target="_blank"> My github </a></span>    
+          </div>
+       
+       
+      </div>
+
+    
+    
+</body>
+</html>
