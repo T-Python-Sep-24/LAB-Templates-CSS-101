@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Intro</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .dotted-divider {
+        width: 80%;
+        border-top: 2px dotted #333; /* Create dotted line */
+        margin: 10px 0; /* Add spacing around the divider */
+        letter-spacing: 5px;
+      }
+      main {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+      .element-selector {
+        color: green;
+      }
+
+      .class-selector {
+        color: blue;
+      }
+
+      #id-selector {
+        color: red;
+      }
+
+      /* Colors and Backgrounds */
+      .color-example {
+        color: #68534e; /* HEX color */
+      }
+
+      .rgb-color-example {
+        color: rgb(62, 98, 62); /* RGB color */
+      }
+
+      .background-example {
+        background-color: rgb(103, 53, 113);
+        color: #f4f4f4;
+        height: 100px;
+        padding: 20px;
+      }
+      .background-img {
+        width: 500px; 
+        height: 200px; 
+        background-image:url("{% static 'images/wall.jpg' %}");
+        color: white;
+        text-align: center;
+        background-size:cover; 
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #000000; 
+        margin: auto; 
+      }
+
+      /* Text Styling */
+      .text-styling {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+      }
+
+      .google-font {
+        font-family: "Roboto", sans-serif; /* Google Fonts */
+      }
+
+      /* Unit of Measurements & Positions */
+      .position-example {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+        background-color: rgb(149, 108, 108);
+        padding: 10px;
+      }
+
+      /* Box Model */
+      .box-model-example {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #333;
+        width: 50%;
+        height: 100px;
+        box-sizing: border-box;
+      }
+
+      /* Layout Basics */
+      .layout-example {
+        margin-top: 20px;
+      }
+
+      .block-example {
+        display: block;
+        width: 100%;
+        background-color: rgb(227, 238, 144);
+        padding: 10px;
+      }
+
+      .inline-example {
+        display: inline;
+        background-color: lightcoral;
+      }
+
+      .inline-block-example {
+        display: inline-block;
+        width: 100px;
+        background-color: lightblue;
+        padding: 10px;
+      }
+
+      /* Flexbox Basics */
+      .flexbox-container {
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: #ddd;
+        padding: 20px;
+      }
+
+      .flex-item {
+        background-color: #737070;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <header>
+      <h2>CSS Introduction</h2>
+    </header>
+
+
+    <main>
+      <!-- Syntax and Selectors -->
+      <section>
+        <h2>Basic Syntax and Selectors</h2>
+        <p class="element-selector">
+          This is an example of an <strong>element selector</strong>.
+        </p>
+        <p class="class-selector">
+          This is a <strong>class selector</strong> example.
+        </p>
+        <p id="id-selector">This is an <strong>ID selector</strong> example.</p>
+        
+      </section>
+
+      <div class="dotted-divider"></div>
+
+      <!-- Colors and Backgrounds -->
+      <section style="background-color: lightblue">
+        <h2>Colors and Backgrounds</h2>
+        <p class="color-example">This text has a color applied using HEX.</p>
+        <p class="rgb-color-example">
+          This text has a color applied using RGB.
+        </p>
+    </section>
+        <div class="background-example">
+          This div has a background and color applied.
+        </div>
+        <div class="background-img">This div has a background image</div>
+      
+
+      <div class="dotted-divider"></div>
+
+      <!-- Text Styling -->
+      <section>
+        <h2>Text Styling</h2>
+        <p class="text-styling">
+          This paragraph demonstrates different text styling properties.
+        </p>
+        <p class="google-font">This text uses Google Fonts.</p>
+      </section>
+
+      <div class="dotted-divider"></div>
+
+      <!-- Unit of Measurements & Positions -->
+      <section>
+        <h2>Unit of Measurements & Positions</h2>
+        <div class="position-example">This is a positioned element.</div>
+      </section>
+
+      <div class="dotted-divider"></div>
+
+      <!-- Box Model -->
+      <section>
+        <h2>Box Model</h2>
+        <div class="box-model-example">
+          This box demonstrates the CSS box model.
+        </div>
+      </section>
+
+      <div class="dotted-divider"></div>
+
+      <!-- Layout Basics -->
+      <section>
+        <h2>Layout Basics</h2>
+        <div class="layout-example">
+          <div class="block-example">Block Element</div>
+          <span class="inline-example">Inline Element</span>
+          <div class="inline-block-example">Inline-Block Element</div>
+        </div>
+      </section>
+
+      <div class="dotted-divider"></div>
+
+      <!-- Flexbox Basics -->
+      <section>
+        <h2>Flexbox Basics</h2>
+        <div class="flexbox-container">
+          <div class="flex-item">Flex Item 1</div>
+          <div class="flex-item">Flex Item 2</div>
+          <div class="flex-item">Flex Item 3</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>By: Khulood</p>
+    </footer>
+  </body>
+</html>
