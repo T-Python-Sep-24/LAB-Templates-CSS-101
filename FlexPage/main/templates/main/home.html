@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/homeStyle.css' %}">
 </head>
 <body>
     <h1>Home Page</h1>
     <p>Hi, this is a test</p>
-    <p><em>Select any a page</em></p>
+    <p><em>Select any page</em></p>
     <ul>
-        <li>
-            <a href="{% url 'main:introduction_view' %}">Go to Introduction</a>
-        </li>
-        <li>
-            <a href="{%url 'main:css_view' %}">Go to styling </a>
-        </li>
-        <li>
-            <a href="{%url 'main:article_ai_view' %}">Go to article AI</a>
-        </li>
-        <li>
-            <a href="{%url 'main:cv_view' %}">Go to my CV </a>
-        </li>
+        <li><a href="{% url 'main:introduction_view' %}">Go to Introduction</a></li>
+        <li><a href="{% url 'main:css_view' %}">Go to styling</a></li>
+        <li><a href="{% url 'main:article_ai_view' %}">Go to article AI</a></li>
+        <li><a href="{% url 'main:cv_view' %}">Go to my CV</a></li>
     </ul>
-
 </body>
 </html>
