@@ -1,27 +1,17 @@
 {% extends 'main/base.html' %}
-{% load static %}  <!-- Load the static tag library here -->
+{% load static %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-<h1>My Projects</h1>
-
-<section>
-    <h2>Project 1: Awesome Website</h2>
-    <img src="{% static 'main/images/project1.jpg' %}" alt="Screenshot of Awesome Website">
-    <p>A brief description of the Awesome Website project, what technologies were used, and its purpose.</p>
-    <a href="http://example.com">View Project</a>
-</section>
-
-<section>
-    <h2>Project 2: Cool App</h2>
-    <img src="{% static 'main/images/project2.jpg' %}" alt="Screenshot of Cool App">
-    <p>A brief description of the Cool App, including the technologies and its functionalities.</p>
-    <a href="http://example.com">View Project</a>
-</section>
-
-<section>
-    <h2>Project 3: Another Great Project</h2>
-    <img src="{% static 'main/images/project3.jpg' %}" alt="Screenshot of Another Great Project">
-    <p>A description of Another Great Project with details on what it does and how it was built.</p>
-    <a href="http://example.com">View Project</a>
-</section>
+<div class="content-container">
+    <h1>My Graduation Project</h1>
+    <section>
+        <h2>Fire Fighting Robot</h2>
+        <img src="{% static 'main/images/fire_fighting_robot.jpg' %}" alt="Fire Fighting Robot" style="max-width: 100%; height: auto;">
+        <p>
+            My graduation project is a Fire Fighting Robot designed to autonomously detect and extinguish fires.
+            This robot utilizes advanced sensors and a water spray mechanism to effectively combat small fires
+            in indoor environments, enhancing safety and emergency response capabilities.
+        </p>
+    </section>
+</div>
 {% endblock %}
