@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 80px;
+        }
+        h1, h2 {
+            color: #492192;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #3e0372;
+            padding: 20px;
+            text-align: left;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .hobby-row {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Hobbies</h1>
+    <p>Welcome to Marwah’s interests and hobbies page. Here are a few of them:</p>
+    
+    <h2>List of Hobbies</h2>
+    <ul>
+        <li>Programming</li>
+        <li>Cooking</li>
+        <li>Fashion Designing</li>
+        <li>Reading</li>
+        <li>Meditation</li>
+    </ul>
+
+    <h2>About My Hobbies</h2>
+    <table>
+        <tr>
+            <th>Hobby</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td class="hobby-row">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/software-development-3d-icon-download-in-png-blend-fbx-gltf-file-formats--html-logo-application-app-web-developer-design-and-pack-icons-9851203.png" alt="Programming Image">
+                Programming
+            </td>
+            <td>Creating website and applications. I love coding in Python and JavaScript!</td>
+        </tr>
+        <tr>
+            <td class="hobby-row">
+                <img src="https://www.shutterstock.com/image-vector/kitchenware-cookware-3d-style-vector-600nw-2292867779.jpg" alt="Cooking Image">
+                Cooking
+            </td>
+            <td>Making delicious meals. I enjoy experimenting with new recipes and cuisines.</td>
+        </tr>
+        <tr>
+            <td class="hobby-row">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/fashion-design-3d-icon-download-in-png-blend-fbx-gltf-file-formats--tailoring-measuring-tape-sewing-tool-needle-pack-clothing-accessories-icons-9483252.png?f=webp" alt="Fashion Designing Image">
+                Fashion Designing
+            </td>
+            <td>Designing stylish outfits. I love sketching and creating my own clothing line.</td>
+        </tr>
+        <tr>
+            <td class="hobby-row">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/book-with-pin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--notebook-paper-stationery-pack-stationary-icons-7502308.png" alt="Reading Image">
+                Reading
+            </td>
+            <td>Diving into different worlds through books. I enjoy fiction, non-fiction, and everything in between!</td>
+        </tr>
+        <tr>
+            <td class="hobby-row">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/meditate-yoga-pose-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--pink-logo-character-meditation-international-day-pack-gym-fitness-illustrations-6988464.png?f=webp" alt="Meditation Image">
+                Meditation
+            </td>
+            <td>Practicing mindfulness and relaxation techniques. It helps me find peace and clarity in my daily life.</td>
+        </tr>
+    </table>
+
+    <h2>I am open to learning new hobbies, let me know about them:</h2>
+    <form action="/submit" method="post">
+        <label for="hobby">Your favorite hobby:</label>
+        <input type="text" id="hobby" name="hobby" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/social-media-3d-icon-download-in-png-blend-fbx-gltf-file-formats--like-logo-feedback-marketing-advertisement-pack-branding-icons-4863035.png?f=webp" alt="A beautiful scenery">
+</body>
+</html>
