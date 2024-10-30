@@ -43,7 +43,7 @@ nav li{
 
 
 .container{
-    
+   background-color: aliceblue; 
     display: flex;
     flex-direction: column;
     text-align: center;
