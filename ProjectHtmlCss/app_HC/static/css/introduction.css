@@ -1,0 +1,18 @@
+
+/* format to table */
+body{
+    background-color: #8b592b63;       /* البني الخشبي */;
+}
+
+h1,h2,h3{
+    color: #8b592b;      /* الأحمر القرمزي */;
+    text-align: left;
+
+
+}
+
+table, th, td {
+    width: 300px; border: 1px solid rgb(80, 80, 80); border-collapse: collapse;
+
+}
+
