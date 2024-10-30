@@ -1,0 +1,80 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS introduction</title>
+    <link href="{%static 'css/css_page.css'%}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+</head>
+<body>
+    <!-- comment -->
+    <h1 id="H1">Things I like</h1>
+    <img src="{%static 'images/hobby.png'%}" alt="html-logo" id="poster"/>
+    <div id="lists">
+    <h4>some of <stong>My</stong> hobbies: </h4>
+    
+    <ul>
+        <li>drawing</li>
+        <li>travlling</li>
+    </ul>
+    <br/>
+    <h4>some of <stong>New</stong> hobbies: </h4>
+    <ol>
+        <li>reading</li>
+        <ul>
+            <li>my faveroite book is "how to impact on other"</li>
+        </ul>
+        <li>explore new things</li>
+    </ol>
+   </div>
+    <table>
+        <caption>links to help me work on my hobbies</caption>
+        <thead>
+            <tr>
+                <th  >Hobby</th>
+                <th  >Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td  >Reading</td>
+                <td ><a href="https://readtheory.org/" target="_blank" >reading website</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Explore new things</td>
+                <td>    <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" >
+                    <img src="{%static 'images/hobbyTime.jpg'%}" id="imglink">
+                  </a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">
+                    End
+                </th>
+            </tr>
+        </tfoot>    
+    </table>
+
+    <h4>Send your opinion through this form:</h4>
+
+
+    <form method="post" action="/handling-form">
+        <lable for="mail">Email</lable>
+        <input type="email" id="mail" name="user_email"/>
+        <br/>
+        <lable for="msg">massege</lable>
+        <br/>
+        <textarea id="msg" name="user_message"></textarea>
+        <br/>
+        <br/>
+        <button type="submit" >submit</button>
+
+    </form>
+    <br/>
+        <button onclick="location.href='#H1'" id="top">TOP</button>
+</body>
+</html>
