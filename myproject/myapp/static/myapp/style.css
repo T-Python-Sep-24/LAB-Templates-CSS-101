@@ -2,7 +2,7 @@
     --primary-color: #002901;
     --secondary-color: #007bff;
     --text-color: #5b5959;
-    --background-color: #f4f4f4;
+    --background-colorr: #f4f4f4;
     --white-color: #ecebeb;
     --font-family: Arial, sans-serif;
 }
@@ -28,7 +28,7 @@ header {
 }
 
 nav {
-    margin: 15px 0;
+    margin: 15px auto; 
 }
 
 nav a {
@@ -36,6 +36,7 @@ nav a {
     color: var(--white-color);
     font-weight: bold;
     text-decoration: none;
+    
 }
 
 nav a:hover {
@@ -43,11 +44,11 @@ nav a:hover {
 }
 
 h1, h2, h3 {
-    margin: 0;
+    margin: 10px;
 }
 
 main {
-    text-align: center;
+    
     margin: 20px;
 }
 
@@ -66,7 +67,6 @@ ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
     margin: 20px 0;
     color: #0a0a0a;
 }
@@ -75,17 +75,21 @@ li {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 10px ;
     background-color: var(--primary-color);
     color: var(--white-color);
-    position: relative;
-    bottom: 0;
     width: 100%;
+}
+#home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;           
+    margin: 0;   
 }
 
 img {
@@ -125,6 +129,11 @@ img {
 
 
 .submit-button {
+    display: flex;
+    flex-direction: column; 
+    
+    
+    margin: auto; 
     background: var(--secondary-color);
     color: var(--white-color);
     border: none;
@@ -134,4 +143,11 @@ img {
 
 .submit-button:hover {
     background: #0056b3;
+}
+
+.form-heading {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;           
+    margin: 0; 
 }
