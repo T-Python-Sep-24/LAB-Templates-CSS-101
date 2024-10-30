@@ -1,0 +1,317 @@
+@import 
+url('https://fonts.googleapis.com/css?family="Poppins&display=swap');
+
+/* * {
+  box-sizing: border-box;
+} */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  border: 1px solid #333;
+}
+
+p {
+  font-size: 16px;
+  color: #222111;
+}
+
+h1 {
+  color: #02b3e4;
+}
+
+h3 {
+  text-align: center;
+  color: #02b3e4;
+}
+
+
+/*
+ *
+ * Header
+ *
+ */
+
+ header {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #333;
+  padding-top: 20px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to top, #ffffff , #cccccc);
+}
+
+.logo, .title {
+  float: left;
+  margin-left: 15px;
+}
+
+.udacity-logo {
+  border: none;
+  width: 80px;
+  height: 80px;
+  padding-top: 20px;
+}
+
+
+/*
+ *
+ * Content
+ *
+ */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 40px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+}
+
+.web-design-img {
+  max-width: 100%;
+}
+
+.my-journey {
+  width: 100%;
+}
+
+.featured-work-title {
+  margin-top: 50px;
+}
+
+.featured-work {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.dark-grey {
+  color: #333444;
+}
+
+
+/*
+ *
+ * Modals of projects
+ *
+ */
+
+.darker {
+    /* margin-bottom: 0; */
+    /* padding-bottom: 0; */
+}
+
+.project-container {
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: #fff; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container-first {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  height: 80vh;
+  width: 100vw;
+  order: 3;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  /* transition: opacity 0.3s ease; */
+}
+
+.container-second {
+    padding-top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    /* transition: opacity 0.3s ease; */
+    /* position: fixed; */
+    /* opacity: 1; */
+}
+
+.container-third {
+    padding-top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 100%;
+  /* transition: opacity 0.3s ease; */
+  /* position: fixed; */
+  /* opacity: 0; */
+}
+
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 350px;
+  max-width: 100%;
+  max-height: 88%;
+  text-align: center;
+}
+
+.modal h3 {
+  margin: 0 auto;
+}
+
+.modal-img {
+  width: 70%;
+  margin: 2px;
+  display:inline;
+}
+
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  width: 100%;
+  padding-left: 30px;
+  background-image: linear-gradient(to bottom, #ffffff , #cccccc);
+}
+
+#copyright {
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+
+/*
+ *
+ * Media Queries
+ *
+ */
+
+@media screen and (max-width: 550px) {
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    padding-left: 10px;
+  }
+
+  .logo, .title {
+    margin-left: 10px;
+  }
+
+  .udacity-logo {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .container {
+    margin: 0 10px;
+  }
+
+  .web-design-img {
+    width: 95%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .my-journey, .featured-work-title {
+    margin: 5px 5px;
+  }
+
+  .featured-work-title {
+    margin-top: 45px;
+  }
+
+  .first-work, .second-work, .third-work {
+    width: 95%;
+    margin: 5px 5px;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media screen and (min-width: 550px) {
+  .second-work {
+    width: 46%;
+    order: +1;
+    margin: 10px auto;
+  }
+
+  .first-work, .third-work {
+    width: 46%;
+    margin: 10px auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  .container {
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero {
+    width: 70%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .my-journey {
+      width: 25%;
+  }
+
+  .first-work, .second-work, .third-work {
+    width: calc((100% - 60px) / 3);
+    margin-right: 5px;
+  }
+
+  .third-work {
+    margin-right: 0;
+  }
+
+  .project-container {
+    flex-direction: row;
+  }
+
+  .container-second, .container-third {
+    width: calc(100% / 2);
+  }
+}
