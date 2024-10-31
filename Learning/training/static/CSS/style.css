@@ -1,0 +1,54 @@
+body{
+    background-color: #D1D1D1;
+    font-weight: bold;
+    position: relative;
+}
+.sticky{
+    text-align: right;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.content table{
+    color: grey;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(175, 184, 200);
+    border-collapse: collapse;
+    
+}
+.content th, td{
+    border:2px solid black;
+    text-align: center;
+
+}
+.Text{
+    border:2px solid;
+    padding: 20px;
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/text.jpeg');
+    background-size: cover;
+    position: absolute;
+
+}
+.container ul{
+    justify-content: center;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding:0;
+}
+.container li{
+    margin-right: 50px;
+}
+
+
+
+

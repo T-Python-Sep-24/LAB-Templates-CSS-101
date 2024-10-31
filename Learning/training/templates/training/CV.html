@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/cv.css'%}">
+    <title>CV</title>
+</head>
+<body>
+    <header>
+        <nav>
+        
+            <ul>
+                <li><a href="{% url 'training:home_view' %}">home</a></li>
+                <li><a href="{% url 'training:html_view' %}">HTML Introdcution</a></li>
+                <li><a href="{% url 'training:css_view' %}">css Introdcution</a></li>
+                <li><a href="{% url 'training:article_view' %}">article ai</a></li>
+                <li><a href="{% url 'training:cv_view' %}">CV</a></li>
+                
+            </ul>
+        </nav>
+        <h1>Ali Khalid Al-Maghamsi</h1>
+        <ul>
+            <li>
+                <a href="mailto:almaghamsiali@gmail.com">
+                    <img src="{% static 'images/email.png' %}" alt="email">
+                    almaghamsiali@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="tel:0591445281">
+                    <img src="{% static 'images/phone.png' %}" alt="phone">
+                    0591445281
+                </a>
+            </li>
+            <li>
+                <a href="https://maps.app.goo.gl/XBEnXDyUyLbcVr818" target="_blank">
+                    <img src="{% static 'images/address.png' %}" alt="address">
+                    Makkah
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ali-al-maghamsi-729593313/" target="_blank">
+                    <img src="{% static 'images/link.png' %}" alt="linl">
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+       <div class="container">
+        <section>
+            <div class="career">
+                <h2>Career Objective</h2>
+                <hr>
+                <p>
+                    As a dedicated computer science graduate, I am eager to grow and contribute in a role where I can solve
+                    problems, adapt quickly, and deliver results. With strong technical skills in programming and a commitment to
+                    continuous improvement, I aim to develop my expertise and make a meaningful impact.
+                </p>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <hr>
+                <p>2020-2024    Bachelor in Computer Science</p>
+                <p>Makkah,Saudi Arabia  <a href="https://uqu.edu.sa/" target="_blank">Umm Al-Qura University</a></p>
+                <p>GPA: 3.9/4</p>
+            </div>
+            <div class="experience">
+                <h2>Work Experience</h2>
+                <hr>
+                <p>Makkah,Saudi Arabia        <b>Platform Agent Part-time</b></p>
+                <p class="exp_par">Managed crowd control at train platforms, ensuring the safety and orderly movement of people.</p>
+                <p>Makkah,Saudi Arabia        <b>Call Center Agent Part-time </b></p>
+                <p class="exp_par">Provided assistance to pilgrims during peak seasons, ensuring smooth operations and addressing inquiries.</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <hr>
+                <ul class="main_skills">
+                    <li >Technical Skills:
+                       <ul class="tech_skills">
+                        <li>Languages
+                            <ul>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </li>
+                        <li>tools
+                            <ul>
+                                <li>Oracle Apex</li>
+                                <li>Pytorch</li>
+                                <li>github</li>
+                                <li>git</li>
+                                <li>CLI</li>
+                            </ul>
+                        </li>
+                       </ul>
+                    </li>
+                    <li>Soft Skills
+                        <ul class="soft_skills">
+                            <li>Hard worker</li>
+                            <li>Strong Under pressuer</li>
+                            <li>Quick learner</li>
+                            <li>Effective communicator</li>
+                            <li>Adaptabke</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projects">
+                <h2>Projects</h2>
+                <hr>
+               <h3>Food Recognition and Calorie Estimation App</h3>
+               <ul>
+                <li>Developed an application that identifies food items from images and provides calorie counts.</li>
+                <li>Role: Team Leader, Data Collector, and Backend Developer</li>
+               </ul>
+               <h3>Restaurant Review Analysis Program</h3>
+               <p>Collected and filtered reviews to analyze customer sentiments for a restaurant.</p>
+            </div>
+            <div class="cert">
+                <h2>Certificates</h2>
+                <hr>
+                <ul>
+                    <li>Web Development Using Python (In Progress)</li>
+                </ul>
+            </div>
+
+            <div class="lang">
+                <h2>Languages</h2>
+                <hr>
+                <ul>
+                    <li>Arabic</li>
+                    <li>English(STEP score:82)</li>
+                </ul>
+            </div>
+
+        </section>
+       </div>
+    </main>
+</body>
+</html>
