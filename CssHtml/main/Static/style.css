@@ -1,0 +1,12 @@
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.red {
+    background: red;
+    color: red;
+}
+
+div{
+background:red;}
