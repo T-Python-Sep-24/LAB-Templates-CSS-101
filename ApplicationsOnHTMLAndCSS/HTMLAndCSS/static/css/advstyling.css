@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+* {
+    font-family: 'Crimson Text', serif;
+}
+
+.addshadow {
+    box-shadow: 0 0 25px 0 #484848;
+}
+
+.addmargin {
+    margin-top: 8em;
+}
+
+.fontstyle {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.sourcelink {
+    text-decoration: none;
+}
+
+.title{
+    font-weight: 600;
+}
+
+.title:hover {
+    font-size: 40px;
+    transition: all 0.3s;
+}
+
+.article {
+    color: #4b796e;
+}
+
+.article::selection {
+    color: #f7fffd;
+    background-color: #4b796e;
+}

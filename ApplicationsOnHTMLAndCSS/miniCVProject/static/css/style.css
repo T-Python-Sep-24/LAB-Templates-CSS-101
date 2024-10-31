@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(221, 239, 255);
+}
+
+.additionNav {
+    box-shadow: 0 0 2em 0 #060606;
+}
+
+.heading {
+    animation: float 3.5s ease-in-out infinite;
+    color: rgb(125, 174, 190);
+}
+
+.headingNoAnimate {
+    color: rgb(125, 174, 190);
+}
+
+.overviewCont,
+.projectsCont,
+.skillsCont {
+    padding: 2em;
+    margin-top: 8em;
+}
+
+.overviewCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 15em;
+    transition: all 0.3s;
+}
+
+.projectsCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 1em;
+    transition: all 0.3s;
+}
+
+/* .skillsCont:hover {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    border-radius: 1em;
+    transition: all 0.3s;
+} */
+
+.overview {
+    font-size: 1.2em;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-0.5em);
+    }
+}
+
+.cardAdditional {
+    width: 18rem;
+    height: 50rem;
+}
+
+.cardText {
+    padding: 1em;
+}
+
+.loading {
+    width: 5em;
+    height: 5em;
+    background-color: rgb(80, 141, 255);
+    animation: squareToCircle 2s 1s infinite alternate;
+  }
+  
+  @keyframes squareToCircle {
+      0% {
+        border-radius: 0 0 0 0;
+        background: rgb(80, 141, 255);
+        transform: rotate(0deg);
+      }
+      25% {
+        border-radius: 50% 0 0 0;
+        background: rgb(105, 113, 255);
+        transform: rotate(45deg);
+      }
+      50% {
+        border-radius: 50% 50% 0 0;
+        background: rgb(168, 105, 255);
+        transform: rotate(90deg);
+      }
+      75% {
+        border-radius: 50% 50% 50% 0;
+        background: rgb(243, 105, 255);
+        transform: rotate(135deg);
+      }
+      100% {
+        border-radius: 50% 50% 50% 50%;
+        background: rgb(115, 125, 255);
+        transform: rotate(180deg);
+      }
+  }
