@@ -76,7 +76,7 @@ html {
 }
  .a-link {
   text-decoration: none;
-  transition: 0.3s all ease;
+  transition: 0.3s all ease ,impotent;
 }
 .a-link:hover{
 margin-left:20px;
