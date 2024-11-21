@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles-cv.css' %}">
+    <title>Abdullah bin Rokan</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="udacity-logo" src="../../static/images/udacity-logo.png" alt="Udacity Logo">
+      </div>
+      <div class="title">
+        <h1 class="dark-grey">Abdullah bin Rokan</h1>
+        <p>Web Developer</p>
+      </div>
+      <nav class="menu-container">
+        <ul class="menu">
+          <li><a href="{% url 'main:career_cv_view' %}">Career CV</a></li>
+          <li><a href="{% url 'main:article_ai_view' %}">Article AI</a></li>
+          <li><a href="{% url 'main:html_intro_view' %}">HTML Introduction</a></li>
+          <li><a href="{% url 'main:css_intro_view' %}">CSS Introduction</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- div containing the web-design img -->
+      <div class="hero">
+        <img class="web-design-img" src="../../static/images/web-design-img.jpg" alt="Web Design">
+      </div>
+      <!-- div containing the articles -->
+      <div class="my-journey">
+        <article>
+          <h1>My Journey</h1>
+          <p>I have a bachelor of computer science from King Saud University, I enjoy coding and problem solving. I use to have basic knowledge of web development. But I wanted to learn more so I took Front-End and React Developer Nanodegrees with MISK Academy which improved my programming skills a lot.</p>
+        </article>
+        <article>
+          <h1>My Goal</h1>
+          <p>My goal is to gain more experince and to become a full-stack developer to build some great web apps</p>
+        </article>
+      </div>
+      <div class="featured-work-title">
+        <h1 class="dark-grey">Skills</h1>
+      </div>
+      <!-- div containing skills contents -->
+      <div class="featured-work">
+        <div class="first-work">
+          <img class="center" id="open_first" src="../../static/images/html-css-js.png" alt="Animal Trading Card">
+          <h3>HTML / CSS / JS</h3>
+        </div>
+        <div class="second-work">
+          <img class="center" id="open_second" src="../../static/images/react.png" alt="MyReads">
+          <h3>React / React Native</h3>
+        </div>
+        <div class="third-work">
+          <img class="center" id="open_third" src="../../static/images/linux2.jpeg" alt="Flashcards">
+          <h3>Linux</h3>
+        </div>
+      </div>
+      <div class="featured-work-title">
+          <h1 class="dark-grey darker">Featured Work</h1>
+        </div>
+    </div>
+    <div class="project-container">
+        <div class="container-first" id="container_first">
+          <div class="modal">
+            <h3>Memory Game</h3>
+            <p>This is a browser-based card matching game (also known as Concentration).</p>
+            <div class="modal-img">
+              <img class="center" src="../../static/images/MemoryGame2.gif" alt="MyReads">
+            </div>
+          </div>
+        </div>
+        <div class="container-second" id="container_second">
+          <div class="modal">
+            <h3>MyReads</h3>
+            <p>MyReads is a web app that allows you to select and categorize books you have read, are currently reading, or want to read.</p>
+            <p>It also allows you to search for books and to add it to your library.</p>
+            <div class="modal-img">
+              <img class="center" src="../../static/images/MyReads.gif" alt="MyReads">
+            </div>
+          </div>
+        </div>
+        <div class="container-third" id="container_third">
+          <div class="modal">
+            <h3>Mobile Flashcards</h3>
+            <p>React Native app that allows users to study collections of flashcards. </p>
+            <div class="modal-img">
+              <img class="center" src="../../static/images/FlashCards2.gif" alt="MyReads">
+            </div>
+          </div>
+        </div>
+    </div>
+    <footer class="dark-grey">
+      <p id="copyright">© 2024 by Abdullah bin Rokan</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

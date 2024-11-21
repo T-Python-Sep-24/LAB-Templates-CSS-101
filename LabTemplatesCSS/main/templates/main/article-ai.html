@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article AI</title>
+    <link rel="stylesheet" href="{% static 'css/styles-ai.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="{% url 'main:career_cv_view' %}">Career CV</a></li>
+                <li><a href="{% url 'main:article_ai_view' %}">Article AI</a></li>
+                <li><a href="{% url 'main:html_intro_view' %}">HTML Introduction</a></li>
+                <li><a href="{% url 'main:css_intro_view' %}">CSS Introduction</a></li>
+            </ul>
+        </nav>
+        <h1>AI for Python Developers: Leveraging Artificial Intelligence</h1>
+    </header>
+    <div class="container">
+        <main>
+            <h3>Discover how to use Python to build powerful AI applications, from data analysis to deployment.</h3>
+            <img src="{% static 'images/ai-blue.jpg' %}" alt="ai image">
+        </main>
+        <article>
+            <h3>Popular AI Libraries and Tools</h3>
+            <p>Python has a range of libraries specifically designed for AI and machine learning. Here are some of the most commonly used ones:</p>
+            <ul>
+                <li><strong>TensorFlow:</strong> An open-source platform by Google for machine learning and deep learning. TensorFlow simplifies the process of building and training neural networks, with capabilities for both beginners and advanced users.</li>
+                <li><strong>PyTorch:</strong> Developed by Facebook, PyTorch offers an intuitive interface for building deep learning models, especially useful for research and rapid prototyping.</li>
+                <li><strong>scikit-learn:</strong> A versatile library for data analysis and classical machine learning, useful for tasks like regression, classification, clustering, and dimensionality reduction.</li>
+            </ul>
+        </article>
+    </div>
+    <article>
+        <h3>Getting Started with AI in Python</h3>
+        <p>Python is one of the most popular languages for AI development due to its simplicity, vast library ecosystem, and community support. From developing intelligent applications to building machine learning models, Python provides all the tools and flexibility you need to explore AI.</p>
+        <iframe width="1374" height="568" src="https://www.youtube.com/embed/7eh4d6sabA0" title="Python Machine Learning Tutorial (Data Science)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </article>
+    <div class="container">
+        <article>
+            <h3>Building Ethical AI Applications</h3>
+            <p>As we develop AI applications, it’s important to consider their ethical implications, such as:</p>
+            <ul>
+                <li><strong>Bias in Data:</strong> Ensure your model is trained on diverse datasets to avoid biased results.</li>
+                <li><strong>Transparency:</strong> Build models that are explainable and make it clear how predictions are generated.</li>
+                <li><strong>Privacy:</strong> Handle sensitive data responsibly by following best practices for data security and anonymization.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Suggested Reading and Resources</h3>
+            <p>For developers looking to deepen their AI knowledge, here are some additional resources:</p>
+            <ul>
+                <li><a href="https://www.udacity.com/course/intro-to-machine-learning-nanodegree--nd229?promo=oct&coupon=TREAT40&utm_source=gsem_generic&utm_medium=ads_r&utm_campaign=20960322867_c_individuals&utm_term=161066722954&utm_keyword=machine%20learning%20with%20pytorch_p&utm_source=gsem_generic&utm_medium=ads_n&utm_campaign=20960322867_c_individuals&utm_term=161066722954&utm_keyword=machine%20learning%20with%20pytorch_p&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2pPvX8GdaMSt92KfaycL-fGmjZRJVp44DjujRBVZnMY2pTMSOwiaJUaArGxEALw_wcB">Advanced TensorFlow and PyTorch Tutorials</a></li>
+                <li><a href="https://medium.com/@sruthy.sn91/model-evaluation-metrics-a-comprehensive-guide-96b71c732937">Understanding Model Evaluation Metric</a></li>
+                <li><a href="https://www.coursera.org/learn/ethics-of-artificial-intelligence?utm_medium=sem&utm_source=gg&utm_campaign=B2C_EMEA__coursera_FTCOF_career-academy_pmax-multiple-audiences-country-multi-set2&campaignid=20882109092&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2pjxY_EOWV4t-7sk8QdURK9GAhQY6cQ7wbbCZOHcA2fmQGtrxCkv1EaAm4rEALw_wcB">Courses on Ethical AI Development</a></li>
+            </ul>
+        </article>
+    </div>
+
+</body>
+</html>
