@@ -1,0 +1,99 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>introduction</title>
+    </head>
+        <body>
+                <h1> <i>Learn the about HTML </i></h1>
+                <h2> <strong><em>is not order</em></strong>  </h2>
+                <h3> test only  </h3>
+                <h4> Hi </h4>
+                <h5> are you good  </h5>
+                <h6> qwertwqreteds </h6>
+                <hr>
+                <p>
+                    <b> use key word  for by default paragraph make it :(<em><mark>Lorem</mark></em>)</b> ipsum dolor sit amet consectetur<br>
+                     adipisicing elit.<sub>2323</sub>Ex nostrum deleniti,<br>
+                    doloribus quod quisquam alias similique id<sup>123456789</sup> natus nam enim?
+                </p>
+                <hr>    
+                <h6> Cities:</h6>              
+                <ul type="circle">
+                    <li>Riyadh</li>
+                    <li>Dammam</li>
+                    <li>Abha</li>
+                </ul>   
+                <hr>
+                <ol type="i">
+                    <P>Full name:</P>
+                    <li>First Name : Khalid</li>
+                    <li>Middle Name: Ayidh</li>
+                    <li>Lsat Name : ALMgahyadi</li>
+                </ol>
+                <hr>
+                <p><i>view image by use static</i></p> 
+                <img src="{% static 'images/download1.jpg' %}" height="200" width="300" alt="Python logo" />   
+                <hr>
+                <p><b>Khalid ALFaisal</b></p>
+                <video height="200" width=" 300" controls>
+                    <source src="{% static 'videos/WhatsApp Video 2024-10-28 .mp4' %}">
+                </video>
+                <hr> 
+                <table>
+                        <tr>
+                            <th>
+                                 Name  
+                            </th>
+                            <th>
+                                Position
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Khalid 
+                            </td>
+                            <td> 
+                                IT Developer 
+                            </td>
+                        </tr>
+                </table>
+                <hr>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br><br>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the terms and conditions
+                    </label>
+                    <br><br>
+                    
+                    <label>User Type:</label><br>
+                    <input type="radio" id="student" name="user_type" value="student" required>
+                    <label for="student">Student</label><br>
+                    <input type="radio" id="professional" name="user_type" value="professional">
+                    <label for="professional">Professional</label><br><br>
+                    
+                    <button type="submit">Submit</button>
+            </form>
+            
+        </body>
+</html>
